@@ -14,12 +14,9 @@ const BigFootAnalysis = () => {
 
         {/* Header */}
         <div className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="text-6xl">🦶</div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-black text-white mb-3">BigFoot Sighting Analysis (PowerBI)</h1>
-              <p className="text-xl text-gray-300">At what weather conditions do most BigFoot sightings occur? Made for DataDNA Dataset Challenge</p>
-            </div>
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-3">BigFoot Sighting Analysis (PowerBI)</h1>
+            <p className="text-xl text-gray-300">At what weather conditions do most BigFoot sightings occur? Made for DataDNA Dataset Challenge</p>
           </div>
 
           <div className="flex flex-wrap gap-3 mb-8">
@@ -41,11 +38,11 @@ const BigFootAnalysis = () => {
           </div>
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="bg-gray-800/50 mb-8">
-              <TabsTrigger value="overview">📊 Overview</TabsTrigger>
-              <TabsTrigger value="analysis">📈 Analysis</TabsTrigger>
-              <TabsTrigger value="insights">💡 Key Insights</TabsTrigger>
-              <TabsTrigger value="conclusion">✅ Conclusion</TabsTrigger>
+            <TabsList className="flex flex-wrap gap-4 bg-transparent mb-8 border-0 justify-start">
+              <TabsTrigger value="overview" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Overview</TabsTrigger>
+              <TabsTrigger value="analysis" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Analysis</TabsTrigger>
+              <TabsTrigger value="insights" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Key Insights</TabsTrigger>
+              <TabsTrigger value="conclusion" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Conclusion</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-8">
@@ -57,7 +54,26 @@ const BigFootAnalysis = () => {
                   <p>
                     BigFoot Sighting Analysis Using PowerBI - Fun project created for the DataDNA Dataset Challenge competition. This comprehensive analysis explores weather conditions, geographic patterns, and temporal trends of BigFoot sightings across the United States from 1921 to 2021.
                   </p>
+                </CardContent>
+              </Card>
 
+              <Card className="bg-gray-900/50 border-gray-800">
+                <CardHeader>
+                  <CardTitle className="gradient-text">Objective</CardTitle>
+                </CardHeader>
+                <CardContent className="text-gray-300 leading-relaxed">
+                  At what weather conditions do most BigFoot sightings occur?
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-800">
+                <CardHeader>
+                  <CardTitle className="gradient-text">About the Data</CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-gray-300 leading-relaxed">
+                    The Bigfoot Field Researchers Organization (BFRO) – <a href="https://www.bfro.net" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">www.bfro.net</a> – is an organization dedicated to investigating the bigfoot/sasquatch mystery. This dataset contains sighting data publicly available on the BFRO website in a more digestible form.
+                  </p>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
                     <div className="text-center glass-card p-4">
                       <div className="text-3xl font-black text-white mb-2">5,021</div>
@@ -69,7 +85,7 @@ const BigFootAnalysis = () => {
                     </div>
                     <div className="text-center glass-card p-4">
                       <div className="text-3xl font-black text-white mb-2">100</div>
-                      <div className="text-xs text-gray-400 uppercase">Years</div>
+                      <div className="text-xs text-gray-400 uppercase">Years (1921-2021)</div>
                     </div>
                     <div className="text-center glass-card p-4">
                       <div className="text-3xl font-black text-white mb-2">49</div>
@@ -81,7 +97,35 @@ const BigFootAnalysis = () => {
 
               <Card className="bg-gray-900/50 border-gray-800">
                 <CardHeader>
-                  <CardTitle className="gradient-text">Tools Used</CardTitle>
+                  <CardTitle className="gradient-text">Competition Details</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="text-gray-300 space-y-2">
+                    <li><strong>Competition:</strong> DataDNA Dataset Challenge</li>
+                    <li><strong>Organizer:</strong> Pomerol Partners</li>
+                    <li><strong>Date:</strong> February 2023</li>
+                    <li><strong>Prize:</strong> $400 Amazon Voucher from sponsors Pomerol, Qlik, Astrato, & NovyPro</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-800">
+                <CardHeader>
+                  <CardTitle className="gradient-text">Dataset Used</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ol className="list-decimal list-inside text-gray-300 space-y-2">
+                    <li>BigFoot sighting records from BFRO (1921-2021)</li>
+                    <li>Weather condition data (temperature, humidity, visibility, pressure, wind speed, cloud cover)</li>
+                    <li>Geographic data (state, county)</li>
+                    <li>Temporal data (year, month, season)</li>
+                  </ol>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-gray-900/50 border-gray-800">
+                <CardHeader>
+                  <CardTitle className="gradient-text">Technologies Used</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">

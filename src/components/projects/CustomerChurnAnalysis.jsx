@@ -14,12 +14,9 @@ const CustomerChurnAnalysis = () => {
 
         {/* Header */}
         <div className="mb-12">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="text-6xl">📉</div>
-            <div>
-              <h1 className="text-4xl md:text-5xl font-black text-white mb-3">Customer Churn Analysis (Tableau)</h1>
-              <p className="text-xl text-gray-300">Subscription Business Intelligence & Customer Retention Analytics</p>
-            </div>
+          <div className="mb-6">
+            <h1 className="text-4xl md:text-5xl font-black text-white mb-3">Customer Churn Analysis (Tableau)</h1>
+            <p className="text-xl text-gray-300">Subscription Business Intelligence & Customer Retention Analytics</p>
           </div>
 
           <div className="flex flex-wrap gap-3 mb-8">
@@ -38,11 +35,11 @@ const CustomerChurnAnalysis = () => {
           </div>
 
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="bg-gray-800/50 mb-8">
-              <TabsTrigger value="overview">📋 Overview</TabsTrigger>
-              <TabsTrigger value="analysis">📈 Analysis</TabsTrigger>
-              <TabsTrigger value="insights">💡 Key Insights</TabsTrigger>
-              <TabsTrigger value="conclusion">✅ Conclusion</TabsTrigger>
+            <TabsList className="flex flex-wrap gap-4 bg-transparent mb-8 border-0 justify-start">
+              <TabsTrigger value="overview" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Overview</TabsTrigger>
+              <TabsTrigger value="analysis" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Analysis</TabsTrigger>
+              <TabsTrigger value="insights" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Key Insights</TabsTrigger>
+              <TabsTrigger value="conclusion" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Conclusion</TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview" className="space-y-8">

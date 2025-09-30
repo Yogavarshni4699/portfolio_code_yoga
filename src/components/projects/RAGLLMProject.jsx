@@ -16,12 +16,9 @@ const RAGLLMProject = () => {
         <div className="container mx-auto px-6 max-w-6xl">
           {/* Header */}
           <div className="mb-12">
-            <div className="flex items-center gap-4 mb-6">
-              <div className="text-6xl">📚</div>
-              <div>
-                <h1 className="text-4xl md:text-5xl font-black text-white mb-3">RAG LLM with Langchain</h1>
-                <p className="text-xl text-gray-300">Retrieval-Augmented Generation system for PDF document querying</p>
-              </div>
+            <div className="mb-6">
+              <h1 className="text-4xl md:text-5xl font-black text-white mb-3">RAG LLM with Langchain</h1>
+              <p className="text-xl text-gray-300">Retrieval-Augmented Generation system for PDF document querying</p>
             </div>
 
             <div className="flex flex-wrap gap-3 mb-8">
@@ -40,11 +37,11 @@ const RAGLLMProject = () => {
             </div>
 
             <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              <TabsList className="grid w-full grid-cols-4 bg-white/5 mb-8">
-                <TabsTrigger value="overview">📋 Overview</TabsTrigger>
-                <TabsTrigger value="architecture">🏢 Architecture</TabsTrigger>
-                <TabsTrigger value="methodology">🔬 Design Process</TabsTrigger>
-                <TabsTrigger value="challenges">⚠️ Challenges</TabsTrigger>
+              <TabsList className="flex flex-wrap gap-4 bg-transparent mb-8 border-0 justify-start">
+                <TabsTrigger value="overview" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Overview</TabsTrigger>
+                <TabsTrigger value="architecture" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Architecture</TabsTrigger>
+                <TabsTrigger value="methodology" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Design Process</TabsTrigger>
+                <TabsTrigger value="challenges" className="data-[state=active]:bg-white data-[state=active]:text-black bg-black border-2 border-white text-white rounded-full px-8 py-3 text-base font-medium">Challenges</TabsTrigger>
               </TabsList>
 
               {/* Tab Content */}

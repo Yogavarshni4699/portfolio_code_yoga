@@ -21,32 +21,32 @@
   },
   {
     "id": 3,
-    "title": "Airbnb Booking Analysis",
-    "subtitle": "Business Intelligence & Data Visualization Dashboard",
-    "category": "Data Visualization & BI",
-    "date": "December 28, 2023",
-    "status": "Done",
-    "tools": ["Tableau", "Data Visualization", "Business Intelligence", "NYC Open Data", "Statistical Analysis"],
-    "icon": "📊"
-  },
-  {
-    "id": 4,
-    "title": "BigFoot Sighting Analysis",
-    "subtitle": "Weather conditions analysis for BigFoot sightings using PowerBI",
+    "title": "BigFoot Sighting Analysis (PowerBI)",
+    "subtitle": "At what weather conditions do most BigFoot sightings occur? Made for DataDNA Dataset Challenge competition",
     "category": "Data Visualization & BI",
     "date": "February 15, 2023",
     "status": "Done",
-    "tools": ["PowerBI", "Excel", "Data Cleaning", "Weather Analytics", "Geographic Analysis"],
+    "tools": ["PowerBI", "Excel", "Data Analysis", "Weather Analytics", "Geographic Analysis", "DataDNA Challenge"],
     "icon": "🦶"
   },
   {
+    "id": 4,
+    "title": "Airbnb Booking Analysis (Tableau)",
+    "subtitle": "Conducted a detailed analysis of Airbnb activities in NYC using a data dashboard to aid various stakeholders in hospitality and real estate",
+    "category": "Data Visualization & BI",
+    "date": "December 28, 2023",
+    "status": "Done",
+    "tools": ["Tableau", "NYC Open Data", "Data Visualization", "Business Intelligence"],
+    "icon": "📊"
+  },
+  {
     "id": 5,
-    "title": "Customer Churn Analysis",
-    "subtitle": "Subscription Business Intelligence & Customer Retention Analytics",
+    "title": "Customer Churn Analysis (Tableau)",
+    "subtitle": "An analytical dashboard to dissect customer churn in a subscription-based business, encompassing geographical, tier, reason, and industry data for strategic decision-making",
     "category": "Data Visualization & BI",
     "date": "January 4, 2024",
     "status": "Done",
-    "tools": ["Tableau", "Customer Analytics", "Churn Analysis", "Business Intelligence", "Statistical Analysis"],
+    "tools": ["Tableau", "Customer Analytics", "Churn Analysis", "Business Intelligence"],
     "icon": "📉"
   }
 ]

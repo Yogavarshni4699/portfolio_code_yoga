@@ -19,9 +19,9 @@ function App() {
     } else if (projectId === 2) {
       navigate('/project/rag-llm')
     } else if (projectId === 3) {
-      navigate('/project/airbnb-analysis')
-    } else if (projectId === 4) {
       navigate('/project/bigfoot-analysis')
+    } else if (projectId === 4) {
+      navigate('/project/airbnb-analysis')
     } else if (projectId === 5) {
       navigate('/project/customer-churn')
     }
@@ -138,8 +138,8 @@ function App() {
       year: '2025',
       description: 'Machine Learning, Business Intelligence, Fraud Analytics, Feature Engineering, Root Cause Analysis',
       achievements: [
-        '✓ Built fraud detection system with 85% precision on 10K+ transactions',
-        '✓ Migrated analytics to Power BI analyzing 18+ MySQL tables with DAX queries'
+        'Built fraud detection system with 85% precision on 10K+ transactions',
+        'Migrated analytics to Power BI analyzing 18+ MySQL tables with DAX queries'
       ]
     },
     {
@@ -150,8 +150,8 @@ function App() {
       year: '2024-25',
       description: 'Data Analysis, B2B SaaS, GenAI, GTM, Product Management, Product Launch',
       achievements: [
-        '✓ Built AI-driven interface reducing website build time by 80%',
-        '✓ Implemented RAG pipeline fine-tuning GPT-4, Gemini & Claude - improved lighthouse 85% & SEO 90%'
+        'Built AI-driven interface reducing website build time by 80%',
+        'Implemented RAG pipeline fine-tuning GPT-4, Gemini & Claude - improved lighthouse 85% & SEO 90%'
       ]
     },
     {
@@ -162,9 +162,9 @@ function App() {
       year: '2024',
       description: 'Product Pricing & Marketing, Banking, Data Quality, Risk Analysis',
       achievements: [
-        '✓ Web scraped competitor rates from 6+ banks using MySQL, Python & Airflow',
-        '✓ Drove 0.85 bps rate increase → 12% CD balance uptick & $800K NII boost',
-        '✓ Enhanced forecasting models with customer activity features → 5% accuracy boost'
+        'Web scraped competitor rates from 6+ banks using MySQL, Python & Airflow',
+        'Drove 0.85 bps rate increase → 12% CD balance uptick & $800K NII boost',
+        'Enhanced forecasting models with customer activity features → 5% accuracy boost'
       ]
     },
     {
@@ -175,9 +175,9 @@ function App() {
       year: '2023-25',
       description: 'ML, Big Data, Deep Learning, NLP, Data Mining, Visualization, Database Design',
       achievements: [
-        '✓ AI-Powered Website Generator - Capstone Project',
-        '✓ Advanced ML, Deep Learning, NLP & Big Data Technologies',
-        '✓ Research in AI-driven web development & natural language processing'
+        'AI-Powered Website Generator - Capstone Project',
+        'Advanced ML, Deep Learning, NLP & Big Data Technologies',
+        'Research in AI-driven web development & natural language processing'
       ]
     },
     {
@@ -188,12 +188,12 @@ function App() {
       year: '2022-23',
       description: 'SaaS, B2B, Go-To-Market Strategy, Product Analytics, Funnel Analysis, Customer Experience',
       achievements: [
-        '✓ Built GTM data pipeline integrating Customer Success, Sales, RevOps & Product data',
-        '✓ Created automated KPI tracking for 50+ team members → influenced VP roadmap priorities',
-        '✓ Delivered self-serve Tableau dashboard → 10% revenue increase via user engagement',
-        '✓ Built predictive churn & revenue models (regression, ARIMA) → 90% accuracy on high-value accounts',
-        '✓ Analyzed subscriber churn → identified $12.57M at-risk revenue with 15% recovery strategies',
-        '✓ Refined dunning strategy via A/B testing → reduced customer calls by 20%'
+        'Built GTM data pipeline integrating Customer Success, Sales, RevOps & Product data',
+        'Created automated KPI tracking for 50+ team members → influenced VP roadmap priorities',
+        'Delivered self-serve Tableau dashboard → 10% revenue increase via user engagement',
+        'Built predictive churn & revenue models (regression, ARIMA) → 90% accuracy on high-value accounts',
+        'Analyzed subscriber churn → identified $12.57M at-risk revenue with 15% recovery strategies',
+        'Refined dunning strategy via A/B testing → reduced customer calls by 20%'
       ]
     },
     {
@@ -204,8 +204,8 @@ function App() {
       year: '2020-22',
       description: 'Oracle SQL, NoSQL, Data Governance, Data Architecture, Data Mining, Agile, Consulting',
       achievements: [
-        '✓ Designed ETL pipeline for AT&T → reduced data processing time by 50%',
-        '✓ Optimized AWS data warehouse (S3, EC2, Redshift) → 40% query performance boost'
+        'Designed ETL pipeline for AT&T → reduced data processing time by 50%',
+        'Optimized AWS data warehouse (S3, EC2, Redshift) → 40% query performance boost'
       ]
     },
     {
@@ -216,9 +216,9 @@ function App() {
       year: '2020',
       description: 'Statistics, Probability, Cancer Research, Bioinformatics, Computational Biology',
       achievements: [
-        '✓ Oncology & Data Visualization Research Project',
-        '✓ 2 years biomedical research experience in cancer studies',
-        '✓ Foundation in statistical analysis, probability & computational biology'
+        'Oncology & Data Visualization Research Project',
+        '2 years biomedical research experience in cancer studies',
+        'Foundation in statistical analysis, probability & computational biology'
       ]
     }
   ]
@@ -227,7 +227,7 @@ function App() {
     {
       name: "Microsoft Azure Fundamentals",
       issuer: "Microsoft",
-      date: "Feb 2022",
+      date: "Issued Feb 2022",
       credentialId: "I143-8742",
       description: "Demonstrated foundational knowledge of cloud concepts, Azure services, workloads, security, privacy, pricing, and support.",
       skills: "Cloud Computing, Azure Services",
@@ -237,7 +237,7 @@ function App() {
     {
       name: "Lean Six Sigma Green Belt",
       issuer: "Linear Training and Consulting",
-      date: "May 2023",
+      date: "Issued May 2023",
       credentialId: "1374/2013",
       description: "Comprehensive training in process improvement methodologies, statistical analysis, and project management for operational excellence.",
       skills: "Process Improvement, Statistical Analysis",
@@ -246,7 +246,9 @@ function App() {
     {
       name: "Product Analytics Certification",
       issuer: "Pendo.io",
-      date: "Jun 2023",
+      date: "Issued Jun 2023",
+      credentialId: "ccb5ee99-0978-42c3-8785-c78226030d06",
+      credentialUrl: "https://www.credly.com/badges/ccb5ee99-0978-42c3-8785-c78226030d06/linked_in_profile",
       description: "Advanced certification in product analytics, user behavior analysis, and data-driven product decision making.",
       skills: "Product Analytics",
       image: "/assets/pendo-badge.png"
@@ -254,11 +256,11 @@ function App() {
     {
       name: "Data Modeling",
       issuer: "SQLBI",
-      date: "May 2022",
+      date: "Issued May 2022",
       credentialId: "80427",
       description: "Expertise in advanced data modeling techniques, DAX formulas, and Power BI optimization for enterprise analytics.",
       skills: "Data Modeling, Power BI, DAX",
-      image: null
+      image: "/assets/sql.png"
     }
   ]
 
@@ -342,22 +344,22 @@ function App() {
 
               {/* Right Column - Story and About */}
               <div className="fade-in order-1 lg:order-2">
-                <h2 className="text-4xl font-black mb-8 gradient-text">ABOUT ME</h2>
-                <div className="h-1 w-16 bg-white mb-8"></div>
+                <h2 className="text-4xl font-black mb-8 gradient-text text-center">ABOUT ME</h2>
+                <div className="h-1 w-16 bg-white mb-8 mx-auto"></div>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
                   My journey into data science started in biomedical research, where I spent two years working on cancer studies. During that time, I realized how important computational biology was in making new discoveries. That experience made me curious about machine learning, and soon I found myself wanting to learn more about data and how it can be used to solve real problems.
                 </p>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
                   After graduation, I joined Infosys and worked with AT&T, where I built my coding and development skills. While I enjoyed the technical side, I wanted to work closer to people and business decisions. That's when I moved to Freshworks, a B2B SaaS company, where I focused on customer success and sales analytics. There, I used data to help improve customer retention and drive business growth.
                 </p>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
                   To strengthen my foundation, I pursued a Master's in Data Science. Alongside my studies, I worked as a Pricing Analyst intern at Discover Financial Services, applying data science to real-world problems in the financial industry.
                 </p>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
                   My journey has been driven by curiosity, exploring data science from pipelines to models to business insights. Outside of work, I enjoy painting and conversations that spark creativity.
                 </p>
 
@@ -404,6 +406,22 @@ function App() {
                     </div>
                     <div className="text-xs text-gray-400 text-center mt-2 font-medium">GITHUB</div>
                   </a>
+
+                  {/* LinkedIn Profile */}
+                  <a
+                    href="https://www.linkedin.com/in/yogavarshni-ramachandran/"
+                    className="transform rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group -ml-4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="LinkedIn Profile"
+                  >
+                    <div className="text-4xl text-gray-300 group-hover:text-white">
+                      <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </div>
+                    <div className="text-xs text-gray-400 text-center mt-2 font-medium">LINKEDIN</div>
+                  </a>
                 </div>
 
                 {/* Explore Journey Button */}
@@ -421,55 +439,64 @@ function App() {
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      <section className="py-20 bg-gradient-to-b from-black to-gray-900">
-        <div className="container mx-auto px-4 sm:px-8">
-          <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4 gradient-text">FEATURED PROJECTS</h3>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-            {projectsData.map((project) => (
-              <div key={project.id} className="glass-card overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300" onClick={() => handleProjectClick(project.id)}>
-                <div className="notion-project-cover">
-                  <div className="notion-cover-pattern"></div>
-                  <div className="notion-cover-content">
-                    <div className="notion-cover-icon">{project.icon || '🚀'}</div>
-                    <div className="notion-cover-label">{project.category}</div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h4 className="text-lg font-bold text-white mb-2">{project.title}</h4>
-                  <p className="text-gray-400 text-sm mb-4">{project.subtitle}</p>
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {project.tools.slice(0, 4).map((tech, index) => (
-                      <span key={index} className="notion-tech-badge">{tech}</span>
-                    ))}
-                    {project.tools.length > 4 && (
-                      <span className="notion-tech-badge">+{project.tools.length - 4}</span>
-                    )}
-                  </div>
-                  <div className="flex justify-between items-center text-xs text-gray-500">
-                    <span>{project.date}</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 rounded-full">{project.status}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-
         </>
+      )}
+
+      {/* PROJECTS PAGE */}
+      {currentPage === 'projects' && (
+        <section id="projects" className="min-h-screen section-padding pt-20">
+          <div className="container mx-auto px-4 sm:px-8">
+            <h2 className="text-5xl font-black text-center mb-20 gradient-text">FEATURED PROJECTS</h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+              {projectsData.map((project) => (
+                <div key={project.id} className="glass-card overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300 flex flex-col" onClick={() => handleProjectClick(project.id)}>
+                  <div className="notion-project-cover">
+                    <div className="notion-cover-pattern"></div>
+                    <div className="notion-cover-content">
+                      <div className="notion-cover-icon">{project.icon || '🚀'}</div>
+                      <div className="notion-cover-label">{project.category}</div>
+                    </div>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    <h4 className="text-lg font-bold text-white mb-2">{project.title}</h4>
+                    <p className="text-gray-400 text-sm mb-4 flex-grow">{project.subtitle}</p>
+                    <div className="flex flex-wrap gap-1 mb-4 min-h-[60px] content-start">
+                      {project.tools.slice(0, 4).map((tech, index) => (
+                        <span key={index} className="notion-tech-badge">{tech}</span>
+                      ))}
+                      {project.tools.length > 4 && (
+                        <span
+                          className="notion-tech-badge relative group cursor-help"
+                          title={project.tools.slice(4).join(', ')}
+                        >
+                          +{project.tools.length - 4}
+                          <span className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-gray-900 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10 border border-gray-700">
+                            {project.tools.slice(4).join(', ')}
+                          </span>
+                        </span>
+                      )}
+                    </div>
+                    <div className="flex justify-between items-center text-xs text-gray-500 mt-auto">
+                      <span>{project.date}</span>
+                      <span className="px-2 py-1 bg-green-500/20 text-green-400 rounded-full">{project.status}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* EXPERIENCE PAGE */}
       {currentPage === 'experience' && (
         <section id="experience" className="min-h-screen section-padding pt-20">
           <div className="container mx-auto px-8">
-            <h2 className="text-5xl font-black text-center mb-20 gradient-text">MY JOURNEY</h2>
+            <h2 className="text-5xl font-black text-center mb-4 gradient-text">MY JOURNEY</h2>
+            <p className="text-center text-gray-400 text-lg mb-20 max-w-4xl mx-auto">
+              From biomedical research to data science - latest first timeline of my educational and professional evolution
+            </p>
             <div className="unified-timeline max-w-6xl mx-auto">
               {timelineData.map((item, index) => (
                 <div key={index} className="timeline-entry fade-in">
@@ -483,7 +510,7 @@ function App() {
                       <p className="text-gray-300 mb-6 leading-relaxed font-light">{item.description}</p>
                       <ul className="space-y-3">
                         {item.achievements.map((achievement, i) => (
-                          <li key={i} className="text-gray-400 flex items-start font-light">
+                          <li key={i} className="text-white flex items-start font-light">
                             <span className="text-white mr-3 font-bold">→</span>
                             {achievement}
                           </li>
@@ -595,11 +622,33 @@ function App() {
                           )}
                         </div>
                         <p className="text-sm text-gray-300 mb-1">{cert.issuer}</p>
-                        <p className="text-xs text-gray-400 mb-3">{cert.date}</p>
+                        <p className="text-xs text-gray-400 mb-1">{cert.date}</p>
+                        {cert.credentialId && (
+                          <div className="mb-3">
+                            {cert.credentialUrl ? (
+                              <a
+                                href={cert.credentialUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 text-xs bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white px-3 py-1.5 rounded-full border border-white/20 transition-all"
+                              >
+                                <span>Show credential</span>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                  <polyline points="15 3 21 3 21 9"></polyline>
+                                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                              </a>
+                            ) : (
+                              <span className="text-xs text-gray-400">Credential ID: {cert.credentialId}</span>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
                     <p className="text-sm text-gray-300 mb-4 leading-relaxed">{cert.description}</p>
-                    <div className="flex items-center justify-between flex-wrap gap-2">
+                    <div>
+                      <p className="text-xs text-gray-400 mb-2 font-semibold">Skills:</p>
                       <div className="flex flex-wrap gap-2">
                         {cert.skills.split(', ').map((skill, i) => (
                           <span key={i} className="text-xs px-3 py-1 bg-white/5 text-gray-300 rounded-full border border-white/10">
@@ -607,9 +656,6 @@ function App() {
                           </span>
                         ))}
                       </div>
-                      {cert.credentialId && (
-                        <p className="text-xs text-gray-500">ID: {cert.credentialId}</p>
-                      )}
                     </div>
                   </div>
                 ))}
@@ -623,8 +669,6 @@ function App() {
       {currentPage === 'activities' && (
         <section id="activities" className="min-h-screen section-padding pt-20">
           <div className="container mx-auto px-8">
-            <h2 className="text-5xl font-black text-center mb-20 gradient-text">ACTIVITIES</h2>
-
             {/* Conferences & Learning */}
             <div className="max-w-6xl mx-auto mb-20">
               <h3 className="text-3xl font-bold text-center mb-12 gradient-text">CONFERENCES & LEARNING</h3>

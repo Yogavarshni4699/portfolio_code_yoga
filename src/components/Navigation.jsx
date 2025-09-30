@@ -7,24 +7,28 @@ export function Navigation({ onPageChange, currentPage }) {
   const location = useLocation()
 
   const handleNavClick = (page) => {
+    // Close mobile menu first
+    setMobileMenuOpen(false)
+
     // If not on home page, navigate first
     if (location.pathname !== '/') {
       navigate('/')
+      // Wait longer for navigation to complete
       setTimeout(() => {
         if (onPageChange) {
           onPageChange(page)
         }
-      }, 100)
+      }, 300)
     } else {
       if (onPageChange) {
         onPageChange(page)
       }
     }
-    setMobileMenuOpen(false)
   }
 
   const navItems = [
     { label: 'Home', page: 'home' },
+    { label: 'Projects', page: 'projects' },
     { label: 'Experience', page: 'experience' },
     { label: 'Skills', page: 'skills' },
     { label: 'Activities', page: 'activities' },
