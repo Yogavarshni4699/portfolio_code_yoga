@@ -1,0 +1,93 @@
+[
+  {
+    "type": "work",
+    "title": "Data Scientist",
+    "organization": "Saayam",
+    "period": "June 2025 - Present",
+    "year": "2025",
+    "description": "Machine Learning, Business Intelligence, Fraud Analytics, Feature Engineering, Root Cause Analysis",
+    "achievements": [
+      "Built fraud detection system with 85% precision on 10K+ transactions",
+      "Migrated analytics to Power BI analyzing 18+ MySQL tables with DAX queries"
+    ]
+  },
+  {
+    "type": "work",
+    "title": "Data Scientist, Research",
+    "organization": "San Jose State University",
+    "period": "September 2024 - June 2025",
+    "year": "2024-25",
+    "description": "Data Analysis, B2B SaaS, GenAI, GTM, Product Management, Product Launch",
+    "achievements": [
+      "Built AI-driven interface reducing website build time by 80%",
+      "Implemented RAG pipeline fine-tuning GPT-4, Gemini & Claude - improved lighthouse 85% & SEO 90%"
+    ]
+  },
+  {
+    "type": "work",
+    "title": "Data Scientist Intern",
+    "organization": "Discover Financial Services",
+    "period": "June 2024 - August 2024",
+    "year": "2024",
+    "description": "Product Pricing & Marketing, Banking, Data Quality, Risk Analysis",
+    "achievements": [
+      "Web scraped competitor rates from 6+ banks using MySQL, Python & Airflow",
+      "Drove 0.85 bps rate increase → 12% CD balance uptick & $800K NII boost",
+      "Enhanced forecasting models with customer activity features → 5% accuracy boost"
+    ]
+  },
+  {
+    "type": "education",
+    "title": "Master of Science in Data Science",
+    "organization": "San Jose State University",
+    "period": "August 2023 - May 2025",
+    "year": "2023-25",
+    "description": "ML, Big Data, Deep Learning, NLP, Data Mining, Visualization, Database Design",
+    "achievements": [
+      "AI-Powered Website Generator - Capstone Project",
+      "Advanced ML, Deep Learning, NLP & Big Data Technologies",
+      "Research in AI-driven web development & natural language processing"
+    ]
+  },
+  {
+    "type": "work",
+    "title": "Data Analyst, CS & Sales",
+    "organization": "Freshworks",
+    "period": "March 2022 - August 2023",
+    "year": "2022-23",
+    "description": "SaaS, B2B, Go-To-Market Strategy, Product Analytics, Funnel Analysis, Customer Experience",
+    "achievements": [
+      "Built GTM data pipeline integrating Customer Success, Sales, RevOps & Product data",
+      "Created automated KPI tracking for 50+ team members → influenced VP roadmap priorities",
+      "Delivered self-serve Tableau dashboard → 10% revenue increase via user engagement",
+      "Built predictive churn & revenue models (regression, ARIMA) → 90% accuracy on high-value accounts",
+      "Analyzed subscriber churn → identified $12.57M at-risk revenue with 15% recovery strategies",
+      "Refined dunning strategy via A/B testing → reduced customer calls by 20%"
+    ]
+  },
+  {
+    "type": "work",
+    "title": "Data Engineer",
+    "organization": "Infosys",
+    "period": "August 2020 - March 2022",
+    "year": "2020-22",
+    "description": "Oracle SQL, NoSQL, Data Governance, Data Architecture, Data Mining, Agile, Consulting",
+    "achievements": [
+      "Designed ETL pipeline for AT&T → reduced data processing time by 50%",
+      "Optimized AWS data warehouse (S3, EC2, Redshift) → 40% query performance boost"
+    ]
+  },
+  {
+    "type": "education",
+    "title": "Bachelors in Bio-Engineering",
+    "organization": "SASTRA Deemed University",
+    "period": "May 2016 - May 2020",
+    "year": "2020",
+    "description": "Statistics, Probability, Cancer Research, Bioinformatics, Computational Biology",
+    "achievements": [
+      "Oncology & Data Visualization Research Project",
+      "2 years biomedical research experience in cancer studies",
+      "Foundation in statistical analysis, probability & computational biology"
+    ]
+  }
+]

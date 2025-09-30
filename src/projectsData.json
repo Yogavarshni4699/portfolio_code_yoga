@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "title": "AI-Powered Website Generator",
+    "subtitle": "AI-Generated Model for multi-page website creation using natural language",
+    "category": "AI & Machine Learning",
+    "date": "May 11, 2025",
+    "status": "In Progress",
+    "tools": ["B2B", "SaaS", "Python", "React", "FastAPI", "MongoDB", "AWS", "GPT-4", "Claude", "Gemini"],
+    "icon": "🤖"
+  },
+  {
+    "id": 2,
+    "title": "RAG LLM with Langchain",
+    "subtitle": "Retrieval-Augmented Generation system for PDF document querying",
+    "category": "AI & Machine Learning",
+    "date": "December 5, 2024",
+    "status": "Done",
+    "tools": ["Python", "LangChain", "ChromaDB", "Ollama", "llama3.2", "PyMuPDF", "ROUGE", "Jupyter"],
+    "icon": "📚"
+  },
+  {
+    "id": 3,
+    "title": "Airbnb Booking Analysis",
+    "subtitle": "Business Intelligence & Data Visualization Dashboard",
+    "category": "Data Visualization & BI",
+    "date": "December 28, 2023",
+    "status": "Done",
+    "tools": ["Tableau", "Data Visualization", "Business Intelligence", "NYC Open Data", "Statistical Analysis"],
+    "icon": "📊"
+  },
+  {
+    "id": 4,
+    "title": "BigFoot Sighting Analysis",
+    "subtitle": "Weather conditions analysis for BigFoot sightings using PowerBI",
+    "category": "Data Visualization & BI",
+    "date": "February 15, 2023",
+    "status": "Done",
+    "tools": ["PowerBI", "Excel", "Data Cleaning", "Weather Analytics", "Geographic Analysis"],
+    "icon": "🦶"
+  },
+  {
+    "id": 5,
+    "title": "Customer Churn Analysis",
+    "subtitle": "Subscription Business Intelligence & Customer Retention Analytics",
+    "category": "Data Visualization & BI",
+    "date": "January 4, 2024",
+    "status": "Done",
+    "tools": ["Tableau", "Customer Analytics", "Churn Analysis", "Business Intelligence", "Statistical Analysis"],
+    "icon": "📉"
+  }
+]
