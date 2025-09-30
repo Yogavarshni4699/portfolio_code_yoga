@@ -26,7 +26,6 @@ export function Navigation({ onPageChange, currentPage }) {
   const navItems = [
     { label: 'Home', page: 'home' },
     { label: 'Experience', page: 'experience' },
-    { label: 'Projects', page: 'projects' },
     { label: 'Skills', page: 'skills' },
     { label: 'Activities', page: 'activities' },
     { label: 'Contact', page: 'contact' }

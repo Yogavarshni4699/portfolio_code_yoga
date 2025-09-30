@@ -8,6 +8,7 @@ import { Badge } from './components/ui/badge'
 function App() {
   const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState('home')
+  const [feedback, setFeedback] = useState('')
 
   const handleProjectClick = (projectId) => {
     if (projectId === 1) {
@@ -23,6 +24,34 @@ function App() {
     }
   }
 
+  const handleFeedbackSubmit = async (e) => {
+    e.preventDefault()
+
+    if (!feedback.trim()) return
+
+    try {
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwG1HaCDDSOz3oMIdhQ7ZrQ4pdyfHmKF1v0jpryzyVrL0D9p8dN3uSz3Udo7YrzMirr/exec'
+
+      const formData = new FormData()
+      formData.append('feedback', feedback)
+      formData.append('timestamp', new Date().toISOString())
+      formData.append('source', 'Portfolio Website')
+
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+      })
+
+      alert('Thank you for your feedback! I\'ll review it soon.')
+      setFeedback('')
+
+    } catch (error) {
+      console.error('Error submitting feedback:', error)
+      alert('There was an issue submitting your feedback. Please try again or contact me directly.')
+    }
+  }
+
   const skillCategories = [
     {
       category: "Programming & Frameworks",
@@ -34,8 +63,8 @@ function App() {
         { name: 'Java', icon: '/icons/java.svg' },
         { name: 'Pandas', icon: '/icons/pandas.svg' },
         { name: 'NumPy', icon: '/icons/numpy.svg' },
-        { name: 'Scikit-learn', icon: '/icons/scikit-lean.svg' },
-        { name: 'SciPy', icon: null },
+        { name: 'Scikit-learn', icon: '/icons/scikitlearn.svg' },
+        { name: 'SciPy', icon: '/icons/SciPy.svg' },
         { name: 'PyTorch', icon: '/icons/pytorch.svg' }
       ]
     },
@@ -45,9 +74,9 @@ function App() {
         { name: 'MySQL', icon: '/icons/mysql.svg' },
         { name: 'Oracle', icon: '/icons/oracle.svg' },
         { name: 'MongoDB', icon: '/icons/mongodb.svg' },
-        { name: 'Snowflake', icon: null },
+        { name: 'Snowflake', icon: '/icons/snowflake.svg' },
         { name: 'Airflow', icon: '/icons/apache.svg' },
-        { name: 'dbt', icon: null },
+        { name: 'dbt', icon: '/icons/dbt.svg' },
         { name: 'Salesforce', icon: '/icons/salesforce.svg' }
       ]
     },
@@ -195,7 +224,8 @@ function App() {
       credentialId: "I143-8742",
       description: "Demonstrated foundational knowledge of cloud concepts, Azure services, workloads, security, privacy, pricing, and support.",
       skills: "Cloud Computing, Azure Services",
-      exam: "AZ-900"
+      exam: "AZ-900",
+      image: "/assets/azure.png"
     },
     {
       name: "Lean Six Sigma Green Belt",
@@ -203,14 +233,16 @@ function App() {
       date: "May 2023",
       credentialId: "1374/2013",
       description: "Comprehensive training in process improvement methodologies, statistical analysis, and project management for operational excellence.",
-      skills: "Process Improvement, Statistical Analysis"
+      skills: "Process Improvement, Statistical Analysis",
+      image: "/assets/sixsigma.png"
     },
     {
       name: "Product Analytics Certification",
       issuer: "Pendo.io",
       date: "Jun 2023",
       description: "Advanced certification in product analytics, user behavior analysis, and data-driven product decision making.",
-      skills: "Product Analytics"
+      skills: "Product Analytics",
+      image: "/assets/pendo-badge.png"
     },
     {
       name: "Data Modeling",
@@ -218,7 +250,8 @@ function App() {
       date: "May 2022",
       credentialId: "80427",
       description: "Expertise in advanced data modeling techniques, DAX formulas, and Power BI optimization for enterprise analytics.",
-      skills: "Data Modeling, Power BI, DAX"
+      skills: "Data Modeling, Power BI, DAX",
+      image: null
     }
   ]
 
@@ -343,7 +376,9 @@ function App() {
                     rel="noopener noreferrer"
                     title="Notion Portfolio"
                   >
-                    <div className="text-4xl text-gray-300 group-hover:text-white">📓</div>
+                    <div className="text-4xl text-gray-300 group-hover:text-white">
+                      <img src="/icons/notion.svg" alt="Notion" className="w-10 h-10 mx-auto" />
+                    </div>
                     <div className="text-xs text-gray-400 text-center mt-2 font-medium">NOTION</div>
                   </a>
 
@@ -384,12 +419,11 @@ function App() {
         <div className="container mx-auto px-4 sm:px-8">
           <div className="text-center mb-12">
             <h3 className="text-4xl font-bold mb-4 gradient-text">FEATURED PROJECTS</h3>
-            <p className="text-gray-400 mb-8 text-base">Scroll horizontally to explore →</p>
           </div>
 
-          <div className="horizontal-scroll-container">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {projectsData.map((project) => (
-              <div key={project.id} className="project-card project-card-horizontal glass-card overflow-hidden cursor-pointer" onClick={() => handleProjectClick(project.id)}>
+              <div key={project.id} className="glass-card overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300" onClick={() => handleProjectClick(project.id)}>
                 <div className="notion-project-cover">
                   <div className="notion-cover-pattern"></div>
                   <div className="notion-cover-content">
@@ -420,32 +454,7 @@ function App() {
       </section>
 
 
-      {/* Contact Section */}
-      <div id="contact" className="mt-20 text-center py-12 border-t border-white/10">
-        <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Let's Connect & Collaborate
-        </h3>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Badge
-            variant="outline"
-            className="px-6 py-3 cursor-pointer hover:bg-white/10 border-purple-400 text-purple-300 text-base"
-          >
-            📧 yogavarshni@gmail.com
-          </Badge>
-          <Badge
-            variant="outline"
-            className="px-6 py-3 cursor-pointer hover:bg-white/10 border-blue-400 text-blue-300 text-base"
-          >
-            💼 LinkedIn
-          </Badge>
-          <Badge
-            variant="outline"
-            className="px-6 py-3 cursor-pointer hover:bg-white/10 border-pink-400 text-pink-300 text-base"
-          >
-            🐙 GitHub
-          </Badge>
-        </div>
-      </div>
+
         </>
       )}
 
@@ -484,49 +493,47 @@ function App() {
         </section>
       )}
 
-      {/* PROJECTS PAGE */}
-      {currentPage === 'projects' && (
-        <section id="projects" className="min-h-screen section-padding pt-20">
-          <div className="container mx-auto px-8">
-            <h2 className="text-5xl font-black text-center mb-12 gradient-text">FEATURED PROJECTS</h2>
-            <p className="text-center text-gray-400 mb-8">Scroll horizontally to explore all projects →</p>
-            <div className="horizontal-scroll-container">
-              {projectsData.map((project) => (
-                <div key={project.id} className="project-card project-card-horizontal glass-card overflow-hidden cursor-pointer" onClick={() => handleProjectClick(project.id)}>
-                  <div className="notion-project-cover">
-                    <div className="notion-cover-pattern"></div>
-                    <div className="notion-cover-content">
-                      <div className="notion-cover-icon">{project.icon || '🚀'}</div>
-                      <div className="notion-cover-label">{project.category}</div>
-                    </div>
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold text-white mb-2">{project.title}</h3>
-                    <p className="text-gray-400 text-sm mb-4">{project.subtitle}</p>
-                    <div className="flex flex-wrap gap-1 mb-4">
-                      {project.tools.slice(0, 4).map((tech, index) => (
-                        <span key={index} className="notion-tech-badge">{tech}</span>
-                      ))}
-                      {project.tools.length > 4 && (
-                        <span className="notion-tech-badge">+{project.tools.length - 4}</span>
-                      )}
-                    </div>
-                    <div className="flex justify-between items-center text-xs text-gray-500">
-                      <span>{project.date}</span>
-                      <span className="px-2 py-1 bg-green-500/20 text-green-400 rounded-full">{project.status}</span>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* SKILLS PAGE */}
       {currentPage === 'skills' && (
         <section id="skills" className="min-h-screen section-padding pt-20">
           <div className="container mx-auto px-4 sm:px-8">
+            {/* Domain Knowledge Section */}
+            <div className="mb-20">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-10 sm:mb-12 gradient-text">DOMAIN KNOWLEDGE</h2>
+              <div className="flex flex-wrap justify-center gap-3 sm:gap-4 max-w-5xl mx-auto">
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">SaaS & GTM Analytics</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">Customer Success & Sales</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">Churn Modeling</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">Finance & Pricing Analytics</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">Fraud Analytics</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">AI & Machine Learning</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">Data Engineering & Cloud</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">BI & Visualization</span>
+                </span>
+                <span className="relative overflow-hidden rounded-full border border-white/20 px-6 py-3 text-xs sm:text-sm text-gray-300 hover:text-white hover:border-white/40 transition-all duration-500 group cursor-pointer before:absolute before:inset-0 before:bg-gradient-to-r before:from-white/5 before:via-white/20 before:to-white/5 before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000">
+                  <span className="relative z-10">Research & BioEngineering</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Section Divider */}
+            <div className="h-px bg-gradient-to-r from-transparent via-white to-transparent mb-20 opacity-20"></div>
+
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-10 sm:mb-20 gradient-text">TECHNICAL EXPERTISE</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {skillCategories.map((category, index) => (
@@ -536,14 +543,14 @@ function App() {
                     <h4 className="text-xs sm:text-sm font-bold text-white">{category.category}</h4>
                     <div className="h-px bg-gradient-to-r from-transparent via-white to-transparent mt-3 opacity-30"></div>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
+                  <div className="flex flex-col items-center sm:grid sm:grid-cols-2 gap-2 sm:gap-3">
                     {category.skills.map((skill, i) => (
-                      <div key={i} className="flex items-center space-x-2 p-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300 group">
+                      <div key={i} className="flex items-center justify-center sm:justify-start space-x-2 p-2 rounded-lg hover:bg-white hover:bg-opacity-10 transition-all duration-300 group w-full sm:w-auto">
                         {skill.icon && (
                           <img
                             src={skill.icon}
                             alt={skill.name}
-                            className="w-5 h-5 brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300"
+                            className={`w-5 h-5 transition-all duration-300 ${['Tableau', 'Scikit-learn', 'Prompting & GenAI', 'dbt', 'Kafka'].includes(skill.name) ? 'brightness-0 invert' : ''}`}
                           />
                         )}
                         <span className="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">{skill.name}</span>
@@ -552,6 +559,54 @@ function App() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* Certifications Section */}
+            <div className="mt-20">
+              <div className="h-px bg-gradient-to-r from-transparent via-white to-transparent mb-20 opacity-20"></div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-10 sm:mb-20 gradient-text">CERTIFICATIONS</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+                {certifications.map((cert, index) => (
+                  <div key={index} className="glass-card p-6 sm:p-8 fade-in hover:scale-105 transition-all duration-300">
+                    <div className="flex items-start gap-6 mb-4">
+                      {cert.image && (
+                        <div className="w-16 h-16 flex-shrink-0">
+                          <img
+                            src={cert.image}
+                            alt={cert.name}
+                            className="w-full h-full object-contain rounded-lg"
+                          />
+                        </div>
+                      )}
+                      <div className="flex-1">
+                        <div className="flex items-start justify-between mb-2">
+                          <h3 className="text-lg sm:text-xl font-bold text-white">{cert.name}</h3>
+                          {cert.exam && (
+                            <div className="bg-white/10 px-3 py-1 rounded-full ml-2">
+                              <span className="text-xs font-semibold text-white">{cert.exam}</span>
+                            </div>
+                          )}
+                        </div>
+                        <p className="text-sm text-gray-300 mb-1">{cert.issuer}</p>
+                        <p className="text-xs text-gray-400 mb-3">{cert.date}</p>
+                      </div>
+                    </div>
+                    <p className="text-sm text-gray-300 mb-4 leading-relaxed">{cert.description}</p>
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2">
+                        {cert.skills.split(', ').map((skill, i) => (
+                          <span key={i} className="text-xs px-3 py-1 bg-white/5 text-gray-300 rounded-full border border-white/10">
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                      {cert.credentialId && (
+                        <p className="text-xs text-gray-500">ID: {cert.credentialId}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -679,34 +734,107 @@ function App() {
 
       {/* CONTACT PAGE */}
       {currentPage === 'contact' && (
-        <section id="contact" className="min-h-screen flex items-center justify-center pt-20">
-          <div className="text-center py-12">
-            <h3 className="text-5xl font-black mb-12 gradient-text">
-              Let's Connect & Collaborate
-            </h3>
-            <div className="flex justify-center gap-4 flex-wrap">
-              <Badge
-                variant="outline"
-                className="px-6 py-3 cursor-pointer hover:bg-white/10 border-purple-400 text-purple-300 text-base"
+        <section id="contact" className="min-h-screen section-padding pt-20">
+          <div className="container mx-auto px-8 text-center">
+            {/* Main Heading */}
+            <h1 className="text-5xl md:text-6xl font-black mb-6 text-white tracking-tight">
+              LET'S CONNECT
+            </h1>
+
+            {/* Subtitle */}
+            <p className="text-gray-400 mb-12 max-w-2xl mx-auto text-lg leading-relaxed">
+              Interested in collaborating, chatting about AI/ML, or just saying hi? Reach out anytime!
+            </p>
+
+            {/* Social Media Icons */}
+            <div className="flex justify-center items-center gap-6 mb-12 flex-wrap">
+              <a
+                href="mailto:yogavarshni@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-8 hover:scale-110 transition-all duration-300 w-32 h-32 flex flex-col items-center justify-center group"
+                title="Email"
               >
-                📧 yogavarshni@gmail.com
-              </Badge>
-              <Badge
-                variant="outline"
-                className="px-6 py-3 cursor-pointer hover:bg-white/10 border-blue-400 text-blue-300 text-base"
+                <div className="text-3xl mb-2 group-hover:scale-125 transition-transform duration-300">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  </svg>
+                </div>
+                <div className="text-xs font-semibold text-gray-400 group-hover:text-white uppercase tracking-wide">Email</div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/yogavarshniramachandran/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-8 hover:scale-110 transition-all duration-300 w-32 h-32 flex flex-col items-center justify-center group"
+                title="LinkedIn"
               >
-                💼 LinkedIn
-              </Badge>
-              <Badge
-                variant="outline"
-                className="px-6 py-3 cursor-pointer hover:bg-white/10 border-pink-400 text-pink-300 text-base"
+                <div className="mb-2 group-hover:scale-125 transition-transform duration-300">
+                  <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-8 h-8" />
+                </div>
+                <div className="text-xs font-semibold text-gray-400 group-hover:text-white uppercase tracking-wide">LinkedIn</div>
+              </a>
+
+              <a
+                href="https://github.com/Yogavarshni4699"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card p-8 hover:scale-110 transition-all duration-300 w-32 h-32 flex flex-col items-center justify-center group"
+                title="GitHub"
               >
-                🐙 GitHub
-              </Badge>
+                <div className="mb-2 group-hover:scale-125 transition-transform duration-300">
+                  <img src="/icons/github-light.svg" alt="GitHub" className="w-8 h-8" />
+                </div>
+                <div className="text-xs font-semibold text-gray-400 group-hover:text-white uppercase tracking-wide">GitHub</div>
+              </a>
+            </div>
+
+            {/* Location */}
+            <div className="flex justify-center items-center gap-2 mb-16">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <span className="text-gray-400 text-sm">San Jose, Bay Area</span>
+            </div>
+
+            {/* Feedback Section */}
+            <div className="max-w-2xl mx-auto">
+              <div className="glass-card p-8 mb-8">
+                <h3 className="text-xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+                  💬 Recommendations or Comments?
+                </h3>
+                <p className="text-gray-400 text-sm mb-6">
+                  Have feedback, suggestions, or want to recommend a project for me? Drop a note below!
+                </p>
+
+                <form onSubmit={handleFeedbackSubmit}>
+                  <textarea
+                    value={feedback}
+                    onChange={(e) => setFeedback(e.target.value)}
+                    placeholder="Type your feedback, suggestions, or project ideas here..."
+                    className="w-full h-32 bg-black/50 border border-white/20 rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent resize-none"
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="mt-4 px-8 py-3 bg-white hover:bg-gray-200 text-black font-semibold rounded-full transition-all duration-300 hover:scale-105"
+                  >
+                    SEND FEEDBACK
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </section>
       )}
+
+      {/* FOOTER - Appears on all pages */}
+      <footer className="border-t border-white/10 py-8 mt-20">
+        <div className="container mx-auto px-8 text-center">
+          <p className="text-gray-600 text-sm">
+            © 2025 Yogavarshni — Fueled by coffee and curiosity ☕
+          </p>
+        </div>
+      </footer>
     </div>
   )
 }
