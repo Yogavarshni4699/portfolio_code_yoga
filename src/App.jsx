@@ -9,6 +9,8 @@ function App() {
   const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState('home')
   const [feedback, setFeedback] = useState('')
+  const [name, setName] = useState('')
+  const [contact, setContact] = useState('')
 
   const handleProjectClick = (projectId) => {
     if (projectId === 1) {
@@ -27,12 +29,14 @@ function App() {
   const handleFeedbackSubmit = async (e) => {
     e.preventDefault()
 
-    if (!feedback.trim()) return
+    if (!feedback.trim() || !name.trim() || !contact.trim()) return
 
     try {
-      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwG1HaCDDSOz3oMIdhQ7ZrQ4pdyfHmKF1v0jpryzyVrL0D9p8dN3uSz3Udo7YrzMirr/exec'
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzdBcYQkv3HVaQbBZOqpb9hocWn9Ti4bV-Rhtg9a2ut9rSIRYb9ln-tMFYy2FLvH2-c/exec'
 
       const formData = new FormData()
+      formData.append('name', name)
+      formData.append('contact', contact)
       formData.append('feedback', feedback)
       formData.append('timestamp', new Date().toISOString())
       formData.append('source', 'Portfolio Website')
@@ -45,6 +49,8 @@ function App() {
 
       alert('Thank you for your feedback! I\'ll review it soon.')
       setFeedback('')
+      setName('')
+      setContact('')
 
     } catch (error) {
       console.error('Error submitting feedback:', error)
@@ -807,6 +813,22 @@ function App() {
                 </p>
 
                 <form onSubmit={handleFeedbackSubmit}>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    placeholder="Your Name"
+                    className="w-full mb-4 bg-black/50 border border-white/20 rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent"
+                    required
+                  />
+                  <input
+                    type="text"
+                    value={contact}
+                    onChange={(e) => setContact(e.target.value)}
+                    placeholder="Email or Phone Number"
+                    className="w-full mb-4 bg-black/50 border border-white/20 rounded-lg p-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/40 focus:border-transparent"
+                    required
+                  />
                   <textarea
                     value={feedback}
                     onChange={(e) => setFeedback(e.target.value)}
