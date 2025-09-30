@@ -4,6 +4,7 @@ import { Navigation } from './components/Navigation'
 import './index.css'
 import projectsData from './projectsData.json'
 import { Badge } from './components/ui/badge'
+import ArtworkCard from './components/ArtworkCard'
 
 function App() {
   const navigate = useNavigate()
@@ -717,19 +718,25 @@ function App() {
               {/* Art Gallery */}
               <div className="max-w-6xl mx-auto">
                 <h3 className="text-3xl font-bold text-center mb-12 gradient-text">MY ARTWORK</h3>
-                <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-                  {['pic1.png', 'pic2.png', 'pic3.png', 'pic4.png', 'pic5.png'].map((pic, idx) => (
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                  {[
+                    { image: '/assets/pic1.png', title: 'Artwork 1' },
+                    { image: '/assets/pic2.png', title: 'Artwork 2' },
+                    { image: '/assets/pic3.png', title: 'Artwork 3' },
+                    { image: '/assets/pic4.png', title: 'Artwork 4' },
+                    { image: '/assets/pic5.png', title: 'Artwork 5' }
+                  ].map((artwork, idx) => (
                     <div
                       key={idx}
-                      className="aspect-square rounded-lg overflow-hidden hover:scale-110 transition-transform cursor-pointer"
-                      style={{
-                        animationDelay: `${idx * 100}ms`,
-                        backgroundImage: `url(/assets/${pic})`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        border: '2px solid rgba(255, 255, 255, 0.1)'
-                      }}
-                    />
+                      className="fade-in"
+                      style={{ animationDelay: `${idx * 100}ms` }}
+                    >
+                      <ArtworkCard
+                        image={artwork.image}
+                        title={artwork.title}
+                        index={idx}
+                      />
+                    </div>
                   ))}
                 </div>
               </div>
