@@ -1,16 +1,30 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Card, CardContent, CardHeader, CardTitle } from '../ui/card'
 import { Badge } from '../ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
 import { Navigation } from '../Navigation'
 
 const CustomerChurnAnalysis = () => {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('overview')
 
   return (
     <div className="min-h-screen bg-black text-white">
       <Navigation />
       <div className="container mx-auto px-8 max-w-6xl pt-20 py-20">
+
+        {/* Back Button */}
+        <button
+          onClick={() => navigate('/projects')}
+          className="mb-8 inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-300 group"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform duration-300">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span className="text-lg font-semibold">Back to Projects</span>
+        </button>
 
         {/* Header */}
         <div className="mb-12">

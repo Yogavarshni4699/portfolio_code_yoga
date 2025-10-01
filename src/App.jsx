@@ -124,7 +124,7 @@ function App() {
         { name: 'Deep Learning', icon: '/icons/tensorflow.svg' },
         { name: 'NLP', icon: '/icons/hugging-face.svg' },
         { name: 'Prompting & GenAI', icon: '/icons/openai.svg' },
-        { name: 'Experimentation & A/B Testing', icon: null }
+        { name: 'Experimentation & A/B Testing', icon: '/icons/ab.svg' }
       ]
     }
   ]
@@ -271,173 +271,188 @@ function App() {
       {/* HOME PAGE */}
       {currentPage === 'home' && (
         <>
-          {/* Hero Section */}
-          <section className="min-h-screen flex items-center justify-center hero-bg py-20">
-        <div className="container mx-auto px-4 sm:px-8 text-center">
-          <div className="floating-animation">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-black mb-4 text-shadow">
-              Yogavarshni Ramachandran
-            </h1>
-            <div className="h-1 w-24 bg-gradient-to-r from-transparent via-white to-transparent mx-auto mb-6 sm:mb-8"></div>
-            <h2 className="text-lg sm:text-xl md:text-3xl text-gray-300 mb-4 font-light tracking-wide">
-              DATA SCIENTIST • ML ENGINEER • AI ENGINEER
-            </h2>
+          {/* Landing Section */}
+          <section className="flex items-center justify-center hero-bg py-16 sm:py-20 pt-24 sm:pt-28">
+            <div className="container mx-auto px-4 sm:px-8">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
+                {/* Left Column - Text Content */}
+                <div className="fade-in text-left">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-shadow floating-animation">
+                    Yogavarshni Ramachandran
+                  </h1>
+                  <div className="h-1 w-24 bg-gradient-to-r from-white via-white to-transparent mb-6 sm:mb-8"></div>
+                  <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-8 font-light tracking-wide whitespace-nowrap floating-animation">
+                    DATA SCIENTIST • ML ENGINEER • AI ENGINEER
+                  </h2>
 
-            {/* Open to Work Badge */}
-            <div className="flex justify-center mt-8 mb-16">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card">
-                <div className="relative">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75"></div>
-                </div>
-                <p className="text-white text-sm font-semibold tracking-wide">Open to Work</p>
-              </div>
-            </div>
-
-            {/* Two Column Layout - Photos & About Me */}
-            <div className="mt-20 grid lg:grid-cols-2 gap-8 lg:gap-16 items-start max-w-6xl mx-auto">
-              {/* Left Column - Journey Photos and Stats */}
-              <div className="fade-in order-2 lg:order-1">
-                <div className="text-center mb-10">
-                  {/* Journey Photos */}
-                  <div className="mb-8">
-                    <h3 className="text-lg font-medium text-gray-300 mb-6">MY JOURNEY</h3>
-                    <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
-                      {/* BioEngineering */}
-                      <div className="text-center">
-                        <img
-                          src="/assets/Labss.png"
-                          alt="BioEngineering"
-                          className="profile-image w-48 sm:w-72 h-64 sm:h-96 object-cover mx-auto mb-3"
-                        />
-                        <p className="text-xs text-gray-400 uppercase tracking-wide">BioEngineering</p>
+                  {/* Open to Work Badge */}
+                  <div className="flex justify-start mb-8">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card">
+                      <div className="relative">
+                        <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                        <div className="absolute inset-0 w-3 h-3 bg-green-500 rounded-full animate-ping opacity-75"></div>
                       </div>
-
-                      {/* Arrow */}
-                      <div className="text-2xl sm:text-3xl text-gray-400 transform rotate-90 sm:rotate-0">→</div>
-
-                      {/* Data Science Photo */}
-                      <div className="text-center">
-                        <img
-                          src="/assets/Mine.png"
-                          alt="Data Scientist"
-                          className="profile-image w-48 sm:w-72 h-64 sm:h-96 object-cover mx-auto mb-3"
-                        />
-                        <p className="text-xs text-gray-400 uppercase tracking-wide">Data Scientist</p>
-                      </div>
+                      <p className="text-white text-sm font-semibold tracking-wide">Open to Work</p>
                     </div>
                   </div>
 
                   {/* Stats */}
-                  <div className="grid grid-cols-2 gap-4 sm:gap-6">
+                  <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mb-8">
                     <div className="glass-card p-6 sm:p-8 text-center">
-                      <div className="text-5xl sm:text-6xl font-black mb-3 text-white">4+</div>
+                      <div className="text-4xl sm:text-5xl font-black mb-2 text-white">4+</div>
                       <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wide">Years Experience</div>
                     </div>
                     <div className="glass-card p-6 sm:p-8 text-center">
-                      <div className="text-5xl sm:text-6xl font-black mb-3 text-white">10+</div>
+                      <div className="text-4xl sm:text-5xl font-black mb-2 text-white">10+</div>
                       <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wide">Projects Completed</div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              {/* Right Column - Story and About */}
-              <div className="fade-in order-1 lg:order-2">
-                <h2 className="text-4xl font-black mb-8 gradient-text text-center">ABOUT ME</h2>
-                <div className="h-1 w-16 bg-white mb-8 mx-auto"></div>
+                {/* Right Column - Photo & Buttons */}
+                <div className="fade-in flex flex-col items-center justify-center">
+                  {/* Photo */}
+                  <div className="mb-6">
+                    <img
+                      src="/assets/MYPIC.png"
+                      alt="Yogavarshni Ramachandran"
+                      className="profile-image w-56 sm:w-72 md:w-80 lg:w-[350px] h-56 sm:h-72 md:h-80 lg:h-[350px] object-cover mx-auto rounded-lg shadow-2xl"
+                    />
+                  </div>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
-                  My journey into data science started in biomedical research, where I spent two years working on cancer studies. During that time, I realized how important computational biology was in making new discoveries. That experience made me curious about machine learning, and soon I found myself wanting to learn more about data and how it can be used to solve real problems.
-                </p>
+                  {/* Buttons/Links */}
+                  <div className="flex justify-center items-center gap-4 flex-wrap">
+                    {/* PDF Resume */}
+                    <a
+                      href="/assets/Resume.pdf"
+                      className="transform -rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group"
+                      download
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Download Resume"
+                    >
+                      <div className="text-3xl text-red-400 group-hover:text-red-300">PDF</div>
+                      <div className="text-xs text-gray-400 text-center mt-2 font-medium">RESUME</div>
+                    </a>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
-                  After graduation, I joined Infosys and worked with AT&T, where I built my coding and development skills. While I enjoyed the technical side, I wanted to work closer to people and business decisions. That's when I moved to Freshworks, a B2B SaaS company, where I focused on customer success and sales analytics. There, I used data to help improve customer retention and drive business growth.
-                </p>
+                    {/* Notion Portfolio */}
+                    <a
+                      href="https://www.notion.so/Yogavarshni-Ramachandran-96849f65bd904e6cabea14213bbc5b4d"
+                      className="transform rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Notion Portfolio"
+                    >
+                      <div className="text-3xl text-gray-300 group-hover:text-white">
+                        <img src="/icons/notion.svg" alt="Notion" className="w-8 h-8 mx-auto" />
+                      </div>
+                      <div className="text-xs text-gray-400 text-center mt-2 font-medium">NOTION</div>
+                    </a>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
-                  To strengthen my foundation, I pursued a Master's in Data Science. Alongside my studies, I worked as a Pricing Analyst intern at Discover Financial Services, applying data science to real-world problems in the financial industry.
-                </p>
+                    {/* GitHub Profile */}
+                    <a
+                      href="https://github.com/Yogavarshni4699"
+                      className="transform -rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="GitHub Profile"
+                    >
+                      <div className="text-3xl text-gray-300 group-hover:text-white">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                      </div>
+                      <div className="text-xs text-gray-400 text-center mt-2 font-medium">GITHUB</div>
+                    </a>
 
-                <p className="text-gray-300 mb-6 leading-relaxed font-light text-left">
-                  My journey has been driven by curiosity, exploring data science from pipelines to models to business insights. Outside of work, I enjoy painting and conversations that spark creativity.
-                </p>
-
-                <div className="flex justify-center items-center gap-4 mt-8">
-                  {/* PDF Resume */}
-                  <a
-                    href="/Resume.pdf"
-                    className="transform -rotate-12 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group"
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Download Resume"
-                  >
-                    <div className="text-4xl text-red-400 group-hover:text-red-300">PDF</div>
-                    <div className="text-xs text-gray-400 text-center mt-2 font-medium">RESUME</div>
-                  </a>
-
-                  {/* Notion Portfolio */}
-                  <a
-                    href="https://www.notion.so/your-notion-page"
-                    className="transform rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group -ml-4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Notion Portfolio"
-                  >
-                    <div className="text-4xl text-gray-300 group-hover:text-white">
-                      <img src="/icons/notion.svg" alt="Notion" className="w-10 h-10 mx-auto" />
-                    </div>
-                    <div className="text-xs text-gray-400 text-center mt-2 font-medium">NOTION</div>
-                  </a>
-
-                  {/* GitHub Profile */}
-                  <a
-                    href="https://github.com/Yogavarshni4699"
-                    className="transform -rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group -ml-4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="GitHub Profile"
-                  >
-                    <div className="text-4xl text-gray-300 group-hover:text-white">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                      </svg>
-                    </div>
-                    <div className="text-xs text-gray-400 text-center mt-2 font-medium">GITHUB</div>
-                  </a>
-
-                  {/* LinkedIn Profile */}
-                  <a
-                    href="https://www.linkedin.com/in/yogavarshni-ramachandran/"
-                    className="transform rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group -ml-4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="LinkedIn Profile"
-                  >
-                    <div className="text-4xl text-gray-300 group-hover:text-white">
-                      <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                    </div>
-                    <div className="text-xs text-gray-400 text-center mt-2 font-medium">LINKEDIN</div>
-                  </a>
-                </div>
-
-                {/* Explore Journey Button */}
-                <div className="flex justify-center mt-8">
-                  <button
-                    onClick={() => document.getElementById('experience').scrollIntoView({ behavior: 'smooth' })}
-                    className="btn-primary px-8 py-3 font-semibold text-sm"
-                  >
-                    Explore My Journey
-                  </button>
+                    {/* LinkedIn Profile */}
+                    <a
+                      href="https://www.linkedin.com/in/yogavarshniramachandran/"
+                      className="transform rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="LinkedIn Profile"
+                    >
+                      <div className="text-3xl text-gray-300 group-hover:text-white">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                      </div>
+                      <div className="text-xs text-gray-400 text-center mt-2 font-medium">LINKEDIN</div>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
+
+          {/* Journey Section */}
+          <section className="min-h-screen flex items-center justify-center py-10 bg-black">
+            <div className="container mx-auto px-4 sm:px-8">
+              <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start max-w-7xl mx-auto">
+                {/* Left Column - Journey Photos */}
+                <div className="fade-in">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">MY JOURNEY</h3>
+                  <div className="flex flex-col sm:flex-row justify-start items-center space-y-6 sm:space-y-0 sm:space-x-8">
+                    {/* BioEngineering */}
+                    <div className="text-center">
+                      <img
+                        src="/assets/Labss.png"
+                        alt="BioEngineering"
+                        className="profile-image w-48 sm:w-64 h-64 sm:h-80 object-cover mx-auto mb-3 rounded-lg"
+                      />
+                      <p className="text-sm text-gray-400 uppercase tracking-wide">BioEngineering</p>
+                    </div>
+
+                    {/* Arrow */}
+                    <div className="text-3xl sm:text-4xl text-gray-400 transform rotate-90 sm:rotate-0">→</div>
+
+                    {/* Data Science Photo */}
+                    <div className="text-center">
+                      <img
+                        src="/assets/Mine.png"
+                        alt="Data Scientist"
+                        className="profile-image w-48 sm:w-64 h-64 sm:h-80 object-cover mx-auto mb-3 rounded-lg"
+                      />
+                      <p className="text-sm text-gray-400 uppercase tracking-wide">Data Scientist</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Column - Story */}
+                <div className="fade-in">
+                  <h2 className="text-3xl sm:text-4xl font-black mb-8 gradient-text">ABOUT ME</h2>
+                  <div className="h-1 w-16 bg-white mb-8"></div>
+
+                  <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                    My journey into data science started in biomedical research, where I spent two years working on cancer studies. During that time, I realized how important computational biology was in making new discoveries. That experience made me curious about machine learning, and soon I found myself wanting to learn more about data and how it can be used to solve real problems.
+                  </p>
+
+                  <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                    After graduation, I joined Infosys and worked with AT&T, where I built my coding and development skills. While I enjoyed the technical side, I wanted to work closer to people and business decisions. That's when I moved to Freshworks, a B2B SaaS company, where I focused on customer success and sales analytics. There, I used data to help improve customer retention and drive business growth.
+                  </p>
+
+                  <p className="text-gray-300 mb-6 leading-relaxed font-light">
+                    To strengthen my foundation, I pursued a Master's in Data Science. Alongside my studies, I worked as a Pricing Analyst intern at Discover Financial Services, applying data science to real-world problems in the financial industry.
+                  </p>
+
+                  <p className="text-gray-300 mb-8 leading-relaxed font-light">
+                    My journey has been driven by curiosity, exploring data science from pipelines to models to business insights. Outside of work, I enjoy painting and conversations that spark creativity.
+                  </p>
+
+                  {/* Explore Journey Button */}
+                  <div className="flex justify-start">
+                    <button
+                      onClick={() => setCurrentPage('experience')}
+                      className="btn-primary px-8 py-3 font-semibold text-sm"
+                    >
+                      Explore My Journey
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
         </>
       )}
@@ -446,7 +461,7 @@ function App() {
       {currentPage === 'projects' && (
         <section id="projects" className="min-h-screen section-padding pt-20">
           <div className="container mx-auto px-4 sm:px-8">
-            <h2 className="text-5xl font-black text-center mb-20 gradient-text">FEATURED PROJECTS</h2>
+            <h2 className="text-5xl font-black text-center mb-20 gradient-text">PERSONAL PROJECTS</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {projectsData.map((project) => (
@@ -568,7 +583,7 @@ function App() {
             {/* Section Divider */}
             <div className="h-px bg-gradient-to-r from-transparent via-white to-transparent mb-20 opacity-20"></div>
 
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-10 sm:mb-20 gradient-text">TECHNICAL EXPERTISE</h2>
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-10 sm:mb-20 gradient-text">TECHNICAL EXPERTISE</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {skillCategories.map((category, index) => (
                 <div key={index} className="glass-card p-4 sm:p-6 fade-in hover:scale-105 transition-all duration-300">
@@ -584,7 +599,7 @@ function App() {
                           <img
                             src={skill.icon}
                             alt={skill.name}
-                            className={`w-5 h-5 transition-all duration-300 ${['Tableau', 'Scikit-learn', 'Prompting & GenAI', 'dbt', 'Kafka'].includes(skill.name) ? 'brightness-0 invert' : ''}`}
+                            className={`w-5 h-5 transition-all duration-300 ${['Tableau', 'Scikit-learn', 'Prompting & GenAI', 'dbt', 'Kafka', 'Experimentation & A/B Testing'].includes(skill.name) ? 'brightness-0 invert' : ''}`}
                           />
                         )}
                         <span className="text-xs sm:text-sm font-medium text-gray-300 group-hover:text-white transition-colors duration-300">{skill.name}</span>
@@ -598,7 +613,7 @@ function App() {
             {/* Certifications Section */}
             <div className="mt-20">
               <div className="h-px bg-gradient-to-r from-transparent via-white to-transparent mb-20 opacity-20"></div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-center mb-10 sm:mb-20 gradient-text">CERTIFICATIONS</h2>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-center mb-10 sm:mb-20 gradient-text">CERTIFICATIONS</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
                 {certifications.map((cert, index) => (
                   <div key={index} className="glass-card p-6 sm:p-8 fade-in hover:scale-105 transition-all duration-300">
@@ -630,10 +645,10 @@ function App() {
                                 href={cert.credentialUrl}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="inline-flex items-center gap-2 text-xs bg-white/10 hover:bg-white/20 text-gray-300 hover:text-white px-3 py-1.5 rounded-full border border-white/20 transition-all"
+                                className="inline-flex items-center gap-2 text-sm font-semibold bg-gradient-to-r from-white/15 to-white/10 hover:from-white/25 hover:to-white/20 text-white px-4 py-2 rounded-lg border border-white/30 hover:border-white/50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-white/20"
                               >
-                                <span>Show credential</span>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <span>Show Credential</span>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                                   <polyline points="15 3 21 3 21 9"></polyline>
                                   <line x1="10" y1="14" x2="21" y2="3"></line>

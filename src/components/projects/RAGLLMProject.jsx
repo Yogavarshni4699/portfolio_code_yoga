@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card'
 import { Badge } from '../ui/badge'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
 import { Navigation } from '../Navigation'
 
 const RAGLLMProject = () => {
+  const navigate = useNavigate()
   const [activeTab, setActiveTab] = useState('overview')
 
   return (
@@ -14,6 +16,18 @@ const RAGLLMProject = () => {
       {/* Main Content */}
       <div className="pt-20 pb-16">
         <div className="container mx-auto px-6 max-w-6xl">
+          {/* Back Button */}
+          <button
+            onClick={() => navigate('/projects')}
+            className="mb-8 inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-300 group"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform duration-300">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span className="text-lg font-semibold">Back to Projects</span>
+          </button>
+
           {/* Header */}
           <div className="mb-12">
             <div className="mb-6">
