@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { Navigation } from './components/Navigation'
 import './index.css'
 import projectsData from './projectsData.json'
@@ -8,10 +8,27 @@ import ArtworkCard from './components/ArtworkCard'
 
 function App() {
   const navigate = useNavigate()
+  const location = useLocation()
   const [currentPage, setCurrentPage] = useState('home')
   const [feedback, setFeedback] = useState('')
   const [name, setName] = useState('')
   const [contact, setContact] = useState('')
+
+  // Set current page based on route
+  useEffect(() => {
+    if (location.pathname === '/projects') {
+      setCurrentPage('projects')
+    } else {
+      setCurrentPage('home')
+    }
+  }, [location.pathname])
+
+  // Scroll to top whenever currentPage changes
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [currentPage])
 
   const handleProjectClick = (projectId) => {
     if (projectId === 1) {
@@ -466,12 +483,22 @@ function App() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
               {projectsData.map((project) => (
                 <div key={project.id} className="glass-card overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300 flex flex-col" onClick={() => handleProjectClick(project.id)}>
-                  <div className="notion-project-cover">
-                    <div className="notion-cover-pattern"></div>
-                    <div className="notion-cover-content">
-                      <div className="notion-cover-icon">{project.icon || '🚀'}</div>
-                      <div className="notion-cover-label">{project.category}</div>
-                    </div>
+                  <div className="notion-project-cover relative">
+                    {project.image ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <>
+                        <div className="notion-cover-pattern"></div>
+                        <div className="notion-cover-content">
+                          <div className="notion-cover-icon">{project.icon || '🚀'}</div>
+                          <div className="notion-cover-label">{project.category}</div>
+                        </div>
+                      </>
+                    )}
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
                     <h4 className="text-lg font-bold text-white mb-2">{project.title}</h4>

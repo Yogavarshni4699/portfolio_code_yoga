@@ -6,12 +6,15 @@ import RAGLLMProject from './components/projects/RAGLLMProject'
 import AirbnbAnalysis from './components/projects/AirbnbAnalysis'
 import BigFootAnalysis from './components/projects/BigFootAnalysis'
 import CustomerChurnAnalysis from './components/projects/CustomerChurnAnalysis'
+import ScrollToTop from './components/ScrollToTop'
 
 const AppRouter = () => {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/projects" element={<App />} />
         <Route path="/project/ai-website-generator" element={<AIWebsiteGenerator />} />
         <Route path="/project/rag-llm" element={<RAGLLMProject />} />
         <Route path="/project/airbnb-analysis" element={<AirbnbAnalysis />} />

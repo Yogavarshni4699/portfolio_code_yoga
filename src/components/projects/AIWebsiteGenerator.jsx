@@ -70,7 +70,7 @@ const AIWebsiteGenerator = () => {
           {/* Back Button */}
           <button
             onClick={() => navigate('/projects')}
-            className="mb-8 inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-300 group"
+            className="mb-8 inline-flex items-center gap-2 text-white hover:text-gray-300 transition-colors duration-300 group cursor-pointer"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform duration-300">
               <line x1="19" y1="12" x2="5" y2="12"></line>
