@@ -32,6 +32,17 @@
     "icon": "🦶",
     "image": "/assets/BigFoot.png"
   },
+   {
+    "id": 6,
+    "title": "Sales Insights (SQL & PowerBI)",
+    "subtitle": "Designed interactive dashboards for sales insights for a hardware company. Visualization consists of Profit Analysis, Key Insights, and Performance Insights.                                 ",
+    "category": "Data Visualization & BI",
+    "date": "December 14, 2021",
+    "status": "Done",
+    "tools": ["PowerBI", "SQL", "Excel", "Star Schema", "ETL", "Data Modeling", "Business Intelligence"],
+    "icon": "💼",
+    "image": "/assets/salesBI.png"
+  },
   {
     "id": 4,
     "title": "Airbnb Booking Analysis (Tableau)",
@@ -54,4 +65,5 @@
     "icon": "📉",
     "image": "/assets/Churn.png"
   }
+  
 ]

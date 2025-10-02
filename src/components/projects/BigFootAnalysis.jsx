@@ -40,14 +40,15 @@ const BigFootAnalysis = () => {
           </div>
 
           <div className="flex gap-4 mb-8 flex-wrap">
-            <a href="https://app.powerbi.com/groups/me/reports/3145d23b-1080-45a8-892b-64c3575766e5/ReportSection" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
-              📊 PowerBI Dashboard
-            </a>
+            
             <a href="https://www.notion.so/BigFoot-Sighting-Analysis-PowerBi-75c9ddadeae84e3687c34d97e7db5c7d" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
               Notion
             </a>
             <a href="https://github.com/Yogavarshni4699/PowerBi_Visualization" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
               GitHub
+            </a>
+            <a href="https://app.powerbi.com/groups/me/reports/3145d23b-1080-45a8-892b-64c3575766e5/ReportSection" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
+              PowerBI Dashboard
             </a>
           </div>
 

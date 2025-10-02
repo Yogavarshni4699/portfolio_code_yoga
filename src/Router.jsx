@@ -6,6 +6,7 @@ import RAGLLMProject from './components/projects/RAGLLMProject'
 import AirbnbAnalysis from './components/projects/AirbnbAnalysis'
 import BigFootAnalysis from './components/projects/BigFootAnalysis'
 import CustomerChurnAnalysis from './components/projects/CustomerChurnAnalysis'
+import SalesInsights from './components/projects/SalesInsights'
 import ScrollToTop from './components/ScrollToTop'
 
 const AppRouter = () => {
@@ -20,6 +21,7 @@ const AppRouter = () => {
         <Route path="/project/airbnb-analysis" element={<AirbnbAnalysis />} />
         <Route path="/project/bigfoot-analysis" element={<BigFootAnalysis />} />
         <Route path="/project/customer-churn" element={<CustomerChurnAnalysis />} />
+        <Route path="/project/sales-insights" element={<SalesInsights />} />
       </Routes>
     </Router>
   )

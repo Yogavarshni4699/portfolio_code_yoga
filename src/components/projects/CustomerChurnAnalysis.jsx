@@ -40,11 +40,17 @@ const CustomerChurnAnalysis = () => {
           </div>
 
           <div className="flex gap-4 mb-8 flex-wrap">
-            <a href="https://public.tableau.com/app/profile/yogavarshni.ramachandran/viz/CustomerChurnAnalysis_17061728390160/Dashboard2?publish=yes" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
-              📊 Tableau Dashboard
+            
+            <a href="https://www.notion.so/Customer-Churn-Analysis-Tableau-f04283d5dcd848aa9ec482e83e0a2bb6" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
+              Notion
             </a>
+
             <a href="https://github.com/Yogavarshni4699/Customer-Churn---Tableau" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
               GitHub
+            </a>
+
+            <a href="https://public.tableau.com/app/profile/yogavarshni.ramachandran/viz/CustomerChurnAnalysis_17061728390160/Dashboard2?publish=yes" target="_blank" rel="noopener noreferrer" className="btn-primary px-6 py-3">
+              Tableau Dashboard
             </a>
           </div>
 

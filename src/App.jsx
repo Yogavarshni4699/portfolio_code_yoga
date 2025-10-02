@@ -41,6 +41,8 @@ function App() {
       navigate('/project/airbnb-analysis')
     } else if (projectId === 5) {
       navigate('/project/customer-churn')
+    } else if (projectId === 6) {
+      navigate('/project/sales-insights')
     }
   }
 
@@ -315,11 +317,17 @@ function App() {
 
                   {/* Stats */}
                   <div className="grid grid-cols-2 gap-4 sm:gap-6 max-w-md mb-8">
-                    <div className="glass-card p-6 sm:p-8 text-center">
+                    <div
+                      className="glass-card p-6 sm:p-8 text-center cursor-pointer hover:scale-105 transition-all duration-300"
+                      onClick={() => setCurrentPage('experience')}
+                    >
                       <div className="text-4xl sm:text-5xl font-black mb-2 text-white">4+</div>
                       <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wide">Years Experience</div>
                     </div>
-                    <div className="glass-card p-6 sm:p-8 text-center">
+                    <div
+                      className="glass-card p-6 sm:p-8 text-center cursor-pointer hover:scale-105 transition-all duration-300"
+                      onClick={() => setCurrentPage('projects')}
+                    >
                       <div className="text-4xl sm:text-5xl font-black mb-2 text-white">10+</div>
                       <div className="text-xs sm:text-sm text-gray-300 uppercase tracking-wide">Projects Completed</div>
                     </div>
