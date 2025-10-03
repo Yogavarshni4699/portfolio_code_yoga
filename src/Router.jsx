@@ -11,6 +11,9 @@ import SalesAnalysis from './components/projects/SalesAnalysis'
 import CustomerSegmentation from './components/projects/CustomerSegmentation'
 import ImageClassification from './components/projects/ImageClassification'
 import NBAAnalysis from './components/projects/NBAAnalysis'
+import NetflixAnalysis from './components/projects/NetflixAnalysis'
+import RedditMoralJudgement from './components/projects/RedditMoralJudgement'
+import SubredditClassification from './components/projects/SubredditClassification'
 import ScrollToTop from './components/ScrollToTop'
 
 const AppRouter = () => {
@@ -30,6 +33,9 @@ const AppRouter = () => {
         <Route path="/project/customer-segmentation" element={<CustomerSegmentation />} />
         <Route path="/project/image-classification" element={<ImageClassification />} />
         <Route path="/project/nba-analysis" element={<NBAAnalysis />} />
+        <Route path="/project/netflix-analysis" element={<NetflixAnalysis />} />
+        <Route path="/project/reddit-moral-judgement" element={<RedditMoralJudgement />} />
+        <Route path="/project/subreddit-classification" element={<SubredditClassification />} />
       </Routes>
     </Router>
   )

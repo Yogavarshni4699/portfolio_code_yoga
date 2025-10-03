@@ -32,7 +32,39 @@
     "icon": "🖼️",
     "image": "/assets/DL.png"
   },
-
+  {
+    "id": 12,
+    "title": "Moral Judgement Dilemmas of Reddit (NLP/ML)",
+    "subtitle": "Leveraging NLP and Machine Learning to analyze Reddit posts and deliver immediate moral judgments, simulating virtual community response",
+    "category": "NLP & Machine Learning",
+    "date": "May 10, 2024",
+    "status": "Done",
+    "tools": ["Python", "NLP", "Scikit-learn", "XGBoost", "TF-IDF", "SMOTE", "Streamlit", "GridSearch"],
+    "icon": "🤖",
+    "image": "/assets/RedditML.png"
+  },
+  {
+    "id": 13,
+    "title": "Classification of Subreddit Posts (PySpark)",
+    "subtitle": "Automatically classifying Reddit posts into correct subreddits using big data and machine learning with scikit-learn and PySpark pipelines",
+    "category": "Big Data & Machine Learning",
+    "date": "May 20, 2024",
+    "status": "Done",
+    "tools": ["PySpark", "Scikit-learn", "Python", "MLlib", "NLTK", "TF-IDF", "HashingTF", "Jupyter"],
+    "icon": "🔥",
+    "image": "/assets/Spark.png"
+  },
+  {
+    "id": 8,
+    "title": "Customer Segmentation Models in Python",
+    "subtitle": "Unsupervised machine learning using K-Means clustering to identify distinct customer segments based on RFM analysis for targeted marketing",
+    "category": "Machine Learning",
+    "date": "October 2, 2021",
+    "status": "Done",
+    "tools": ["Python", "K-Means", "Pandas", "Scikit-learn", "RFM Analysis", "Clustering", "Jupyter"],
+    "icon": "👥",
+    "image": "/assets/SEG.png"
+  },
   {
     "id": 4,
     "title": "Airbnb Booking Analysis (Tableau)",
@@ -89,17 +121,6 @@
     "image": "/assets/SS.png"
   },
   {
-    "id": 8,
-    "title": "Customer Segmentation Models in Python",
-    "subtitle": "Unsupervised machine learning using K-Means clustering to identify distinct customer segments based on RFM analysis for targeted marketing",
-    "category": "Machine Learning",
-    "date": "October 2, 2021",
-    "status": "Done",
-    "tools": ["Python", "K-Means", "Pandas", "Scikit-learn", "RFM Analysis", "Clustering", "Jupyter"],
-    "icon": "👥",
-    "image": "/assets/SEG.png"
-  },
-  {
     "id": 10,
     "title": "Exploratory Data Analysis on NBA Player Stats",
     "subtitle": "Web-scraped NBA statistics analysis with comparative visualization study between Pandas and Seaborn for data-driven insights",
@@ -108,7 +129,18 @@
     "status": "Done",
     "tools": ["Python", "Pandas", "Seaborn", "Matplotlib", "Web Scraping", "EDA", "Jupyter"],
     "icon": "🏀",
-    "image": ""
+    "image": "/assets/NBA.png"
+  },
+  {
+    "id": 11,
+    "title": "User Sentiment Analysis on Netflix Content",
+    "subtitle": "Comprehensive data analysis of Netflix's streaming content catalog with sentiment analysis and business insights",
+    "category": "Data Analysis",
+    "date": "May 30, 2022",
+    "status": "Done",
+    "tools": ["Python", "Pandas", "NumPy", "Plotly", "TextBlob", "Sentiment Analysis", "Jupyter"],
+    "icon": "🎬",
+    "image": "/assets/Netflix.png"
   }
 
 ]

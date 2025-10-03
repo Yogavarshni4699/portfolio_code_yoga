@@ -51,6 +51,12 @@ function App() {
       navigate('/project/image-classification')
     } else if (projectId === 10) {
       navigate('/project/nba-analysis')
+    } else if (projectId === 11) {
+      navigate('/project/netflix-analysis')
+    } else if (projectId === 12) {
+      navigate('/project/reddit-moral-judgement')
+    } else if (projectId === 13) {
+      navigate('/project/subreddit-classification')
     }
   }
 
@@ -299,15 +305,15 @@ function App() {
       {currentPage === 'home' && (
         <>
           {/* Landing Section */}
-          <section className="flex items-center justify-center hero-bg py-16 sm:py-20 pt-24 sm:pt-28">
+          <section className="flex items-center justify-center hero-bg py-16 sm:py-20 pt-32 sm:pt-40">
             <div className="container mx-auto px-4 sm:px-8">
               <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto">
                 {/* Left Column - Text Content */}
                 <div className="fade-in text-left">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 text-shadow floating-animation">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 text-shadow floating-animation">
                     Yogavarshni Ramachandran
                   </h1>
-                  <div className="h-1 w-24 bg-gradient-to-r from-white via-white to-transparent mb-6 sm:mb-8"></div>
+                  <div className="h-1 w-24 bg-gradient-to-r from-white via-white to-transparent mb-8 sm:mb-10"></div>
                   <h2 className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-8 font-light tracking-wide whitespace-nowrap floating-animation">
                     DATA SCIENTIST • ML ENGINEER • AI ENGINEER
                   </h2>
