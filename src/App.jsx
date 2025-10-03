@@ -16,8 +16,11 @@ function App() {
 
   // Set current page based on route
   useEffect(() => {
-    if (location.pathname === '/projects') {
-      setCurrentPage('projects')
+    const path = location.pathname.substring(1) // Remove leading '/'
+    if (path === '') {
+      setCurrentPage('home')
+    } else if (['projects', 'experience', 'skills', 'activities', 'contact'].includes(path)) {
+      setCurrentPage(path)
     } else {
       setCurrentPage('home')
     }

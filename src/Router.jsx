@@ -23,6 +23,10 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/projects" element={<App />} />
+        <Route path="/experience" element={<App />} />
+        <Route path="/skills" element={<App />} />
+        <Route path="/activities" element={<App />} />
+        <Route path="/contact" element={<App />} />
         <Route path="/project/ai-website-generator" element={<AIWebsiteGenerator />} />
         <Route path="/project/rag-llm" element={<RAGLLMProject />} />
         <Route path="/project/airbnb-analysis" element={<AirbnbAnalysis />} />

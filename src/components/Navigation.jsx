@@ -10,19 +10,16 @@ export function Navigation({ onPageChange, currentPage }) {
     // Close mobile menu first
     setMobileMenuOpen(false)
 
-    // If not on home page, navigate first
-    if (location.pathname !== '/') {
+    // Navigate to the appropriate route
+    if (page === 'home') {
       navigate('/')
-      // Wait longer for navigation to complete
-      setTimeout(() => {
-        if (onPageChange) {
-          onPageChange(page)
-        }
-      }, 300)
     } else {
-      if (onPageChange) {
-        onPageChange(page)
-      }
+      navigate(`/${page}`)
+    }
+
+    // Call onPageChange if provided
+    if (onPageChange) {
+      onPageChange(page)
     }
   }
 
