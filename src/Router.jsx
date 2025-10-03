@@ -7,6 +7,10 @@ import AirbnbAnalysis from './components/projects/AirbnbAnalysis'
 import BigFootAnalysis from './components/projects/BigFootAnalysis'
 import CustomerChurnAnalysis from './components/projects/CustomerChurnAnalysis'
 import SalesInsights from './components/projects/SalesInsights'
+import SalesAnalysis from './components/projects/SalesAnalysis'
+import CustomerSegmentation from './components/projects/CustomerSegmentation'
+import ImageClassification from './components/projects/ImageClassification'
+import NBAAnalysis from './components/projects/NBAAnalysis'
 import ScrollToTop from './components/ScrollToTop'
 
 const AppRouter = () => {
@@ -22,6 +26,10 @@ const AppRouter = () => {
         <Route path="/project/bigfoot-analysis" element={<BigFootAnalysis />} />
         <Route path="/project/customer-churn" element={<CustomerChurnAnalysis />} />
         <Route path="/project/sales-insights" element={<SalesInsights />} />
+        <Route path="/project/sales-analysis" element={<SalesAnalysis />} />
+        <Route path="/project/customer-segmentation" element={<CustomerSegmentation />} />
+        <Route path="/project/image-classification" element={<ImageClassification />} />
+        <Route path="/project/nba-analysis" element={<NBAAnalysis />} />
       </Routes>
     </Router>
   )

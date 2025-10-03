@@ -22,27 +22,17 @@
     "image": "/assets/LLM_RAG.png"
   },
   {
-    "id": 3,
-    "title": "BigFoot Sighting Analysis (PowerBI)",
-    "subtitle": "At what weather conditions do most BigFoot sightings occur? Made for DataDNA Dataset Challenge competition",
-    "category": "Data Visualization & BI",
-    "date": "February 15, 2023",
+    "id": 9,
+    "title": "Image Classification using Deep Learning",
+    "subtitle": "Sports Image Classification using custom deep neural networks with 11 experimental configurations exploring various architectures and techniques",
+    "category": "Deep Learning",
+    "date": "November 20, 2024",
     "status": "Done",
-    "tools": ["PowerBI", "Excel", "Data Analysis", "Weather Analytics", "Geographic Analysis", "DataDNA Challenge"],
-    "icon": "🦶",
-    "image": "/assets/BigFoot.png"
+    "tools": ["Python", "PyTorch", "Deep Learning", "Neural Networks", "Adam", "SGD", "CNN"],
+    "icon": "🖼️",
+    "image": "/assets/DL.png"
   },
-   {
-    "id": 6,
-    "title": "Sales Insights (SQL & PowerBI)",
-    "subtitle": "Designed interactive dashboards for sales insights for a hardware company. Visualization consists of Profit Analysis, Key Insights, and Performance Insights.                                 ",
-    "category": "Data Visualization & BI",
-    "date": "December 14, 2021",
-    "status": "Done",
-    "tools": ["PowerBI", "SQL", "Excel", "Star Schema", "ETL", "Data Modeling", "Business Intelligence"],
-    "icon": "💼",
-    "image": "/assets/salesBI.png"
-  },
+
   {
     "id": 4,
     "title": "Airbnb Booking Analysis (Tableau)",
@@ -64,6 +54,61 @@
     "tools": ["Tableau", "Customer Analytics", "Churn Analysis", "Business Intelligence"],
     "icon": "📉",
     "image": "/assets/Churn.png"
+  },
+  {
+    "id": 6,
+    "title": "Sales Insights (SQL & PowerBI)",
+    "subtitle": "Designed interactive dashboards for sales insights for a hardware company. Visualization consists of Profit Analysis, Key Insights, and Performance Insights.                                 ",
+    "category": "Data Visualization & BI",
+    "date": "December 14, 2021",
+    "status": "Done",
+    "tools": ["PowerBI", "SQL", "Excel", "Star Schema", "ETL", "Data Modeling", "Business Intelligence"],
+    "icon": "💼",
+    "image": "/assets/salesBI.png"
+  },
+  {
+    "id": 3,
+    "title": "BigFoot Sighting Analysis (PowerBI)",
+    "subtitle": "At what weather conditions do most BigFoot sightings occur? Made for DataDNA Dataset Challenge competition",
+    "category": "Data Visualization & BI",
+    "date": "February 15, 2023",
+    "status": "Done",
+    "tools": ["PowerBI", "Excel", "Data Analysis", "Weather Analytics", "Geographic Analysis", "DataDNA Challenge"],
+    "icon": "🦶",
+    "image": "/assets/BigFoot.png"
+  },
+  {
+    "id": 7,
+    "title": "Sales-Shipment Analysis Application (Python & PyQt)",
+    "subtitle": "End-to-end system integrating operational and analytical modules for real-time order tracking, feedback, and dynamic sales insights with interactive dashboards",
+    "category": "Database & Application Design",
+    "date": "December 10, 2023",
+    "status": "Done",
+    "tools": ["Python", "SQL", "MySQL Workbench", "PyQt", "Pandas", "Sklearn", "ETL", "Database Design"],
+    "icon": "📦",
+    "image": "/assets/SS.png"
+  },
+  {
+    "id": 8,
+    "title": "Customer Segmentation Models in Python",
+    "subtitle": "Unsupervised machine learning using K-Means clustering to identify distinct customer segments based on RFM analysis for targeted marketing",
+    "category": "Machine Learning",
+    "date": "October 2, 2021",
+    "status": "Done",
+    "tools": ["Python", "K-Means", "Pandas", "Scikit-learn", "RFM Analysis", "Clustering", "Jupyter"],
+    "icon": "👥",
+    "image": "/assets/SEG.png"
+  },
+  {
+    "id": 10,
+    "title": "Exploratory Data Analysis on NBA Player Stats",
+    "subtitle": "Web-scraped NBA statistics analysis with comparative visualization study between Pandas and Seaborn for data-driven insights",
+    "category": "Data Analysis",
+    "date": "May 26, 2022",
+    "status": "Done",
+    "tools": ["Python", "Pandas", "Seaborn", "Matplotlib", "Web Scraping", "EDA", "Jupyter"],
+    "icon": "🏀",
+    "image": ""
   }
-  
+
 ]

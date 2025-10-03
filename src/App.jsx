@@ -43,6 +43,14 @@ function App() {
       navigate('/project/customer-churn')
     } else if (projectId === 6) {
       navigate('/project/sales-insights')
+    } else if (projectId === 7) {
+      navigate('/project/sales-analysis')
+    } else if (projectId === 8) {
+      navigate('/project/customer-segmentation')
+    } else if (projectId === 9) {
+      navigate('/project/image-classification')
+    } else if (projectId === 10) {
+      navigate('/project/nba-analysis')
     }
   }
 
