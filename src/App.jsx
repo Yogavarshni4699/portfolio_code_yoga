@@ -364,7 +364,8 @@ function App() {
 
                   {/* Buttons/Links */}
                   <div className="flex justify-center items-center gap-4 flex-wrap">
-                    {/* PDF Resume */}
+                   
+                   {/* PDF Resume 
                     <a
                       href="/assets/Resume.pdf"
                       className="transform -rotate-6 hover:rotate-0 transition-all duration-300 hover:scale-110 glass-card p-6 hover:z-10 relative group"
@@ -375,8 +376,8 @@ function App() {
                     >
                       <div className="text-3xl text-red-400 group-hover:text-red-300">PDF</div>
                       <div className="text-xs text-gray-400 text-center mt-2 font-medium">RESUME</div>
-                    </a>
-
+                    </a>  
+*/}
                     {/* Notion Portfolio */}
                     <a
                       href="https://www.notion.so/Yogavarshni-Ramachandran-96849f65bd904e6cabea14213bbc5b4d"
