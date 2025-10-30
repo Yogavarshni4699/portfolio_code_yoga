@@ -1,6 +1,17 @@
 [
   {
     "id": 1,
+    "title": "AI Bedtime Story Generator",
+    "subtitle": "An intelligent storytelling application that generates, evaluates, and refines bedtime stories for children aged 5-10 using AI agents",
+    "category": "AI & Agents",
+    "date": "October 15, 2025",
+    "status": "Done",
+    "tools": ["Python", "React", "Next.js", "Flask", "OpenAI", "Prompt Engineering", "Multi-Agent Systems"],
+    "icon": "📖",
+    "image": "/assets/StoryGenerator.png"
+  },
+  {
+    "id": 2,
     "title": "AI-Powered Website Generator",
     "subtitle": "AI-Generated Model for multi-page website creation using natural language",
     "category": "AI & Machine Learning",
@@ -8,10 +19,10 @@
     "status": "In Progress",
     "tools": ["B2B", "SaaS", "Python", "React", "FastAPI", "MongoDB", "AWS", "GPT-4", "Claude", "Gemini"],
     "icon": "🤖",
-    "image": "/assets/AIWEB.png"
+    "image": "/assets/WebGen.png"
   },
   {
-    "id": 2,
+    "id": 3,
     "title": "RAG LLM with Langchain",
     "subtitle": "Retrieval-Augmented Generation system for PDF document querying",
     "category": "AI & Machine Learning",
@@ -22,7 +33,7 @@
     "image": "/assets/LLM_RAG.png"
   },
   {
-    "id": 9,
+    "id": 4,
     "title": "Image Classification using Deep Learning",
     "subtitle": "Sports Image Classification using custom deep neural networks with 11 experimental configurations exploring various architectures and techniques",
     "category": "Deep Learning",
@@ -33,7 +44,7 @@
     "image": "/assets/DL.png"
   },
   {
-    "id": 12,
+    "id": 5,
     "title": "Moral Judgement Dilemmas of Reddit (NLP/ML)",
     "subtitle": "Leveraging NLP and Machine Learning to analyze Reddit posts and deliver immediate moral judgments, simulating virtual community response",
     "category": "NLP & Machine Learning",
@@ -44,7 +55,7 @@
     "image": "/assets/RedditML.png"
   },
   {
-    "id": 13,
+    "id": 6,
     "title": "Classification of Subreddit Posts (PySpark)",
     "subtitle": "Automatically classifying Reddit posts into correct subreddits using big data and machine learning with scikit-learn and PySpark pipelines",
     "category": "Big Data & Machine Learning",
@@ -55,7 +66,7 @@
     "image": "/assets/Spark.png"
   },
   {
-    "id": 8,
+    "id": 7,
     "title": "Customer Segmentation Models in Python",
     "subtitle": "Unsupervised machine learning using K-Means clustering to identify distinct customer segments based on RFM analysis for targeted marketing",
     "category": "Machine Learning",
@@ -66,7 +77,7 @@
     "image": "/assets/SEG.png"
   },
   {
-    "id": 4,
+    "id": 8,
     "title": "Airbnb Booking Analysis (Tableau)",
     "subtitle": "Conducted a detailed analysis of Airbnb activities in NYC using a data dashboard to aid various stakeholders in hospitality and real estate",
     "category": "Data Visualization & BI",
@@ -77,7 +88,7 @@
     "image": "/assets/Airbnb.png"
   },
   {
-    "id": 5,
+    "id": 9,
     "title": "Customer Churn Analysis (Tableau)",
     "subtitle": "An analytical dashboard to dissect customer churn in a subscription-based business, encompassing geographical, tier, reason, and industry data for strategic decision-making",
     "category": "Data Visualization & BI",
@@ -88,7 +99,7 @@
     "image": "/assets/Churn.png"
   },
   {
-    "id": 6,
+    "id": 10,
     "title": "Sales Insights (SQL & PowerBI)",
     "subtitle": "Designed interactive dashboards for sales insights for a hardware company. Visualization consists of Profit Analysis, Key Insights, and Performance Insights.                                 ",
     "category": "Data Visualization & BI",
@@ -99,7 +110,7 @@
     "image": "/assets/salesBI.png"
   },
   {
-    "id": 3,
+    "id": 11,
     "title": "BigFoot Sighting Analysis (PowerBI)",
     "subtitle": "At what weather conditions do most BigFoot sightings occur? Made for DataDNA Dataset Challenge competition",
     "category": "Data Visualization & BI",
@@ -110,7 +121,7 @@
     "image": "/assets/BigFoot.png"
   },
   {
-    "id": 7,
+    "id": 12,
     "title": "Sales-Shipment Analysis Application (Python & PyQt)",
     "subtitle": "End-to-end system integrating operational and analytical modules for real-time order tracking, feedback, and dynamic sales insights with interactive dashboards",
     "category": "Database & Application Design",
@@ -121,7 +132,7 @@
     "image": "/assets/SS.png"
   },
   {
-    "id": 10,
+    "id": 13,
     "title": "Exploratory Data Analysis on NBA Player Stats",
     "subtitle": "Web-scraped NBA statistics analysis with comparative visualization study between Pandas and Seaborn for data-driven insights",
     "category": "Data Analysis",
@@ -132,7 +143,7 @@
     "image": "/assets/NBA.png"
   },
   {
-    "id": 11,
+    "id": 14,
     "title": "User Sentiment Analysis on Netflix Content",
     "subtitle": "Comprehensive data analysis of Netflix's streaming content catalog with sentiment analysis and business insights",
     "category": "Data Analysis",

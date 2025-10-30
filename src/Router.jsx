@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import App from './App'
+import BedtimeStoryProject from './components/projects/BedtimeStoryProject'
 import AIWebsiteGenerator from './components/projects/AIWebsiteGenerator'
 import RAGLLMProject from './components/projects/RAGLLMProject'
 import AirbnbAnalysis from './components/projects/AirbnbAnalysis'
@@ -27,6 +28,7 @@ const AppRouter = () => {
         <Route path="/skills" element={<App />} />
         <Route path="/activities" element={<App />} />
         <Route path="/contact" element={<App />} />
+        <Route path="/project/bedtime-story-generator" element={<BedtimeStoryProject />} />
         <Route path="/project/ai-website-generator" element={<AIWebsiteGenerator />} />
         <Route path="/project/rag-llm" element={<RAGLLMProject />} />
         <Route path="/project/airbnb-analysis" element={<AirbnbAnalysis />} />

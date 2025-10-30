@@ -8,15 +8,33 @@ const ProjectsPage = () => {
 
   const handleProjectClick = (projectId) => {
     if (projectId === 1) {
-      navigate('/project/ai-website-generator')
+      navigate('/project/bedtime-story-generator')
     } else if (projectId === 2) {
-      navigate('/project/rag-llm')
+      navigate('/project/ai-website-generator')
     } else if (projectId === 3) {
-      navigate('/project/bigfoot-analysis')
+      navigate('/project/rag-llm')
     } else if (projectId === 4) {
-      navigate('/project/airbnb-analysis')
+      navigate('/project/image-classification')
     } else if (projectId === 5) {
+      navigate('/project/reddit-moral-judgement')
+    } else if (projectId === 6) {
+      navigate('/project/subreddit-classification')
+    } else if (projectId === 7) {
+      navigate('/project/customer-segmentation')
+    } else if (projectId === 8) {
+      navigate('/project/airbnb-analysis')
+    } else if (projectId === 9) {
       navigate('/project/customer-churn')
+    } else if (projectId === 10) {
+      navigate('/project/sales-insights')
+    } else if (projectId === 11) {
+      navigate('/project/bigfoot-analysis')
+    } else if (projectId === 12) {
+      navigate('/project/sales-analysis')
+    } else if (projectId === 13) {
+      navigate('/project/nba-analysis')
+    } else if (projectId === 14) {
+      navigate('/project/netflix-analysis')
     }
   }
 
