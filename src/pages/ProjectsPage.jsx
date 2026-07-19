@@ -7,7 +7,9 @@ const ProjectsPage = () => {
   const navigate = useNavigate()
 
   const handleProjectClick = (projectId) => {
-    if (projectId === 1) {
+    if (projectId === 15) {
+      return
+    } else if (projectId === 1) {
       navigate('/project/bedtime-story-generator')
     } else if (projectId === 2) {
       navigate('/project/ai-website-generator')
@@ -49,7 +51,7 @@ const ProjectsPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
             {projectsData.map((project) => (
-              <div key={project.id} className="glass-card overflow-hidden cursor-pointer hover:scale-105 transition-all duration-300 flex flex-col" onClick={() => handleProjectClick(project.id)}>
+              <div key={project.id} className={`glass-card overflow-hidden hover:scale-105 transition-all duration-300 flex flex-col ${project.status === 'Upcoming' ? 'cursor-default' : 'cursor-pointer'}`} onClick={() => handleProjectClick(project.id)}>
                 <div className="notion-project-cover">
                   <div className="notion-cover-pattern"></div>
                   <div className="notion-cover-content">
@@ -78,7 +80,7 @@ const ProjectsPage = () => {
                   </div>
                   <div className="flex justify-between items-center text-xs text-gray-500 mt-auto">
                     <span>{project.date}</span>
-                    <span className="px-2 py-1 bg-green-500/20 text-green-400 rounded-full">{project.status}</span>
+                    <span className={`px-2 py-1 rounded-full ${project.status === 'Upcoming' ? 'bg-yellow-500/20 text-yellow-400' : 'bg-green-500/20 text-green-400'}`}>{project.status}</span>
                   </div>
                 </div>
               </div>

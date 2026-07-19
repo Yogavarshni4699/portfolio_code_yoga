@@ -565,7 +565,7 @@ function App() {
           <div className="container mx-auto px-8">
             <h2 className="text-5xl font-black text-center mb-4 gradient-text">MY JOURNEY</h2>
             <p className="text-center text-gray-400 text-lg mb-20 max-w-4xl mx-auto">
-              From biomedical research to data science - latest first timeline of my educational and professional evolution
+              From biomedical research to data science and AI - latest first timeline of my educational and professional evolution
             </p>
             <div className="unified-timeline max-w-6xl mx-auto">
               {timelineData.map((item, index) => (

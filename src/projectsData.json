@@ -1,7 +1,18 @@
 [
   {
+    "id": 15,
+    "title": "Private Local AI Model Benchmarking Platform",
+    "subtitle": "Upcoming",
+    "category": "AI & Agents",
+    "date": "Upcoming",
+    "status": "Upcoming",
+    "tools": ["Ollama", "FastAPI", "Pydantic", "Docker"],
+    "icon": "🚧",
+    "image": "/assets/local_llm.avif"
+  },
+  {
     "id": 1,
-    "title": "AI Bedtime Story Generator",
+    "title": "Multi-Agent Generative AI System + LLM-as-a-Judge Evaluation",
     "subtitle": "An intelligent storytelling application that generates, evaluates, and refines bedtime stories for children aged 5-10 using AI agents",
     "category": "AI & Agents",
     "date": "October 15, 2025",

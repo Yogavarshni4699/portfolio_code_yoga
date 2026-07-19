@@ -1,10 +1,22 @@
 [
   {
     "type": "work",
+    "title": "AI Engineer",
+    "organization": "Owens & Minor",
+    "period": "June 2026 - Present",
+    "year": "2026",
+    "description": "AI Automation, Client Deployment, Warehouse Management, Supply Chain AI",
+    "achievements": [
+      "Working on AI automation, deploying solutions in client environments",
+      "Building end-to-end warehouse management & supply chain AI automation"
+    ]
+  },
+  {
+    "type": "work",
     "title": "Data Scientist",
     "organization": "Saayam",
-    "period": "June 2025 - Present",
-    "year": "2025",
+    "period": "June 2025 - May 2026",
+    "year": "2025-26",
     "description": "Machine Learning, Business Intelligence, Fraud Analytics, Feature Engineering, Root Cause Analysis",
     "achievements": [
       "Built fraud detection system with 85% precision on 10K+ transactions",
