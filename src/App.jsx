@@ -158,6 +158,10 @@ function App() {
     {
       category: "AI / ML",
       skills: [
+        { name: 'AI Agents', icon: '/icons/anthropic.svg' },
+        { name: 'LLM Evaluation', icon: '/icons/openai.svg' },
+        { name: 'LangChain', icon: '/icons/hugging-face.svg' },
+        { name: 'RAG', icon: '/icons/claude-ai.svg' },
         { name: 'Machine Learning', icon: '/icons/pytorch.svg' },
         { name: 'Deep Learning', icon: '/icons/tensorflow.svg' },
         { name: 'NLP', icon: '/icons/hugging-face.svg' },
@@ -170,10 +174,22 @@ function App() {
   const timelineData = [
     {
       type: 'work',
+      title: 'AI Engineer',
+      organization: 'Owens & Minor',
+      period: 'June 2026 - Present',
+      year: '2026',
+      description: 'AI Automation, Client Deployment, Warehouse Management, Supply Chain AI',
+      achievements: [
+        'Working on AI automation, deploying solutions in client environments',
+        'Building end-to-end warehouse management & supply chain AI automation'
+      ]
+    },
+    {
+      type: 'work',
       title: 'Data Scientist',
       organization: 'Saayam',
-      period: 'June 2025 - Present',
-      year: '2025',
+      period: 'June 2025 - May 2026',
+      year: '2025-26',
       description: 'Machine Learning, Business Intelligence, Fraud Analytics, Feature Engineering, Root Cause Analysis',
       achievements: [
         'Built fraud detection system with 85% precision on 10K+ transactions',
