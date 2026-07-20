@@ -178,10 +178,10 @@ function App() {
       organization: 'Owens & Minor',
       period: 'June 2026 - Present',
       year: '2026',
-      description: 'AI Automation, Client Deployment, Warehouse Management, Supply Chain AI',
+      description: 'Enterprise AI Automation | AI Agents | Client Deployment | Warehouse & Supply Chain Intelligence',
       achievements: [
-        'Working on AI automation, deploying solutions in client environments',
-        'Building end-to-end warehouse management & supply chain AI automation'
+        'Designing and deploying secure, production-ready AI automation and agentic workflows within client environments.',
+        'Building end-to-end warehouse and supply chain solutions using AI agents, demand forecasting, exception analysis, and workflow automation.'
       ]
     },
     {
